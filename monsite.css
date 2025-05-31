@@ -1,0 +1,624 @@
+.beth-ellen-regular {
+    font-family: "Beth Ellen", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.francois-one-regular {
+    font-family: "Francois One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.2;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: linear-gradient(45deg, rgba(255, 107, 53, 0.3), rgba(247, 147, 30, 0.3));*/
+}
+
+.hero-text {
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    color: white;
+}
+
+.main-title {
+    font-family: "Francois One";
+    letter-spacing: 3px;
+    font-size: 7rem;
+    font-weight: 900;
+    color: #FF4500;
+    line-height: 0.9;
+    margin-bottom: 2rem;
+}
+
+.subtitle-container {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin-bottom: 1rem;
+}
+
+.subtitle-left {
+    font-family: "Beth Ellen";
+    font-size: 1.65rem;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+/*.est-year {
+    font-size: 1rem;
+    color: #FFD700;
+    font-weight: bold;
+}*/
+
+/* Hi There Section */
+.hi-there {
+    background: #e9dccc;
+    padding: 4rem 8%;
+    position: relative;
+    padding-right: 0;
+}
+
+.hi-content {
+    margin-bottom: 5%;
+}
+
+.hi-title {
+    font-family: "Beth Ellen";
+    font-size: 7rem;
+    color: #FF4500;
+    font-weight: 900;
+    margin-bottom: 4rem;
+}
+
+.hi-text-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#hi-direction {
+    position: relative;
+    max-width: 600px;
+        display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hi-text-container a {
+    color: #2C2C2C;
+    text-decoration: none;
+}
+
+.hi-text {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+#hi-img {
+    width: 100%;
+    height: 65vh;
+    object-fit: cover;
+    margin-left: 10%;
+}
+
+.star-orange {
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    background: #FF4500;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.par-content {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.par-title {
+    font-size: 5rem;
+}
+
+.par-text {
+    text-align: right;
+}
+
+/* Parcours Section */
+.parcours {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    background: #e9dccc;
+    padding: 4rem 8%;
+    position: relative;
+}
+
+.parcours-content {
+    position: relative;
+}
+
+.parcours-title {
+    font-family: "Beth Ellen";
+    font-size: 6rem;
+    color: #FF4500;
+    font-weight: 900;
+    margin-bottom: 3rem;
+}
+
+.parcours-timeline {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.timeline-year {
+    background: #FFD700;
+    color: #FF4500;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    margin-left: 2rem;
+    min-width: 80px;
+    text-align: center;
+}
+
+.timeline-content {
+    text-align: end;
+}
+
+.timeline-content h3 {
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.flower-orange-parcours {
+    position: absolute;
+    right: 130%;
+    top: 30%;
+    width: 70px;
+    height: 70px;
+    background: #FFD700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flower-orange-parcours::before {
+    content: "✿";
+    font-size: 2rem;
+    color: #FF4500;
+}
+
+/* Compétences Section */
+.competences {
+    background: #e9dccc;
+    padding: 9rem 8%;
+    position: relative;
+}
+
+.competences-content {
+    position: relative;
+}
+
+.competences-title {
+    font-family: "Beth Ellen";
+    font-size: 6rem;
+    color: #FF4500;
+    font-weight: 900;
+    margin-bottom: 3rem;
+}
+
+.competences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    max-width: 900px;
+}
+
+.competence-category {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.category-title {
+    font-size: 1.5rem;
+    color: #FF4500;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.skill-item {
+    background: #F7931E;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-2px);
+    background: #FF6B35;
+}
+
+.star-white-competences {
+    position: absolute;
+    right: 8%;
+    bottom: 20%;
+    width: 60px;
+    height: 60px;
+    background: white;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* Projects Section */
+.projects {
+    background: #FF6B35;
+    padding: 4rem 8%;
+    position: relative;
+    box-shadow: 0px 10px 30px rgba(173, 72, 35, 0.768);
+    z-index: 99;
+}
+
+.projects-bg {
+    display: flex;
+}
+
+.projects-title {
+    font-family: "Francois One";
+    font-size: 8rem;
+    color: #FFD700;
+    font-weight: 900;
+}
+
+.projects-images {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-img-1,
+.project-img-2 {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.flower-white {
+    position: absolute;
+    right: 10%;
+    bottom: 15%;
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flower-white::before {
+    content: "✿";
+    font-size: 2.5rem;
+    color: #FF6B35;
+}
+
+/* Eco Skincare Section */
+.eco-skincare {
+    background: #F7931E;
+    padding: 4rem 8%;
+    position: relative;
+}
+
+.eco-title {
+    font-size: 3rem;
+    color: #FFD700;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    line-height: 0.9;
+}
+
+.eco-image-container {
+    margin: 2rem 0;
+}
+
+.eco-img {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.eco-desc {
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 1rem;
+    max-width: 300px;
+}
+
+.star-white-small {
+    position: absolute;
+    right: 15%;
+    top: 20%;
+    width: 50px;
+    height: 50px;
+    background: white;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* Craft Store Section */
+.craft-store {
+    background: #FFD700;
+    padding: 4rem 8%;
+    position: relative;
+}
+
+.craft-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.craft-img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.craft-title {
+    font-size: 2.8rem;
+    color: #FF6B35;
+    font-weight: 900;
+    line-height: 0.9;
+    margin-bottom: 2rem;
+}
+
+.craft-desc {
+    font-size: 0.9rem;
+    color: #333;
+    max-width: 300px;
+}
+
+.flower-orange {
+    position: absolute;
+    right: 8%;
+    bottom: 15%;
+    width: 70px;
+    height: 70px;
+    background: #FF6B35;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flower-orange::before {
+    content: "✿";
+    font-size: 2rem;
+    color: white;
+}
+
+/* Luxury Wellness Section */
+.luxury-wellness {
+    background: #F7931E;
+    padding: 4rem 8%;
+    position: relative;
+}
+
+.wellness-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.wellness-title {
+    font-size: 2.8rem;
+    color: #FFD700;
+    font-weight: 900;
+    line-height: 0.9;
+    margin-bottom: 2rem;
+}
+
+.wellness-desc {
+    font-size: 0.9rem;
+    color: #333;
+    max-width: 300px;
+}
+
+.wellness-image-container {
+    position: relative;
+}
+
+.wellness-img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.star-orange-small {
+    position: absolute;
+    right: -30px;
+    bottom: -20px;
+    width: 45px;
+    height: 45px;
+    background: #FF4500;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* Contact Section */
+.contact {
+    background: #2C2C2C;
+    padding: 4rem 8%;
+    text-align: center;
+    position: relative;
+}
+
+.contact-title {
+    font-family: "Beth Ellen";
+    font-size: 4rem;
+    color: #FF4500;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    line-height: 0.9;
+}
+
+.contact-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+
+.contact-info {
+    position: relative;
+    display: inline-block;
+}
+
+.contact-details {
+    color: white;
+    font-size: 1rem;
+}
+
+.contact-label {
+    margin: 1rem 0 0.5rem 0;
+    font-weight: bold;
+}
+
+.contact-value {
+    margin-bottom: 1rem;
+}
+
+.star-yellow {
+    position: absolute;
+    left: -80px;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background: #FFD700;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .hi-title,
+    .contact-title,
+    .parcours-title,
+    .competences-title {
+        font-size: 2.5rem;
+    }
+
+    .projects-title,
+    .eco-title {
+        font-size: 2rem;
+    }
+
+    .craft-content,
+    .wellness-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .projects-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .competences-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .timeline-year {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .star-orange,
+    .star-white-small,
+    .star-orange-small,
+    .star-yellow,
+    .flower-orange-parcours,
+    .star-white-competences {
+        display: none;
+    }
+}
