@@ -1,3 +1,9 @@
+.londrina-solid-regular {
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .beth-ellen-regular {
     font-family: "Beth Ellen", cursive;
     font-weight: 400;
@@ -18,7 +24,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.2;
 }
 
@@ -59,9 +65,9 @@ body {
 }
 
 .main-title {
-    font-family: "Francois One";
+    font-family: "Londrina Solid";
     letter-spacing: 3px;
-    font-size: 7rem;
+    font-size: 9rem;
     font-weight: 900;
     color: #FF4500;
     line-height: 0.9;
@@ -71,13 +77,13 @@ body {
 .subtitle-container {
     display: flex;
     justify-content: space-between;
-    width: 500px;
+    width: 800px;
     margin-bottom: 1rem;
 }
 
 .subtitle-left {
     font-family: "Beth Ellen";
-    font-size: 1.65rem;
+    font-size: 2rem;
     color: #FFD700;
     font-weight: bold;
 }
@@ -127,7 +133,7 @@ body {
 }
 
 .hi-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #333;
     line-height: 1.6;
 }
@@ -145,7 +151,7 @@ body {
     top: 50%;
     width: 60px;
     height: 60px;
-    background: #FF4500;
+    background: #FA9DAF;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
 
@@ -234,7 +240,7 @@ body {
     top: 30%;
     width: 70px;
     height: 70px;
-    background: #FFD700;
+    background: #FA9DAF;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -318,7 +324,7 @@ body {
     background: white;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
-
+    
 /* Projects Section */
 .projects {
     background: #FF6B35;
@@ -333,7 +339,7 @@ body {
 }
 
 .projects-title {
-    font-family: "Francois One";
+    font-family: "Londrina Solid";
     font-size: 8rem;
     color: #FFD700;
     font-weight: 900;
@@ -379,6 +385,12 @@ body {
     position: relative;
 }
 
+.eco-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
 .eco-title {
     font-size: 3rem;
     color: #FFD700;
@@ -387,12 +399,14 @@ body {
     line-height: 0.9;
 }
 
-.eco-image-container {
+.eco-image-container, .wellness-image-container {
+    width: 1000px;
+    display: flex;
     margin: 2rem 0;
 }
 
 .eco-img {
-    width: 400px;
+    width: 350px;
     height: 250px;
     object-fit: cover;
     border-radius: 8px;
@@ -413,6 +427,31 @@ body {
     height: 50px;
     background: white;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.initial-text img {
+    width: 200px;
+    height: 200px;
+}
+
+.hover-text {
+    max-width: 800px;
+    padding-left: 13%;
+    padding-top: 3%;
+}
+
+.hover-text:hover .initial-text {
+    display: none;
+}
+
+.hover-text:hover .hover-content {
+    display: block;
+    padding-top: 0;
+}
+
+.hover-content {
+    display: none;
+    color: #333;
 }
 
 /* Craft Store Section */
@@ -468,6 +507,15 @@ body {
     color: white;
 }
 
+.craft-text {
+    display: flex;
+}
+
+.craft-text .hover-text {
+    width: 640px;
+    padding-left: 7.4%;
+}
+
 /* Luxury Wellness Section */
 .luxury-wellness {
     background: #F7931E;
@@ -495,10 +543,6 @@ body {
     max-width: 300px;
 }
 
-.wellness-image-container {
-    position: relative;
-}
-
 .wellness-img {
     width: 350px;
     height: 250px;
@@ -508,13 +552,18 @@ body {
 
 .star-orange-small {
     position: absolute;
-    right: -30px;
-    bottom: -20px;
+    right: 50px;
+    z-index: 99;
     width: 45px;
     height: 45px;
     background: #FF4500;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
+
+.wellness-image-container .hover-content {
+    width: 520px;
+}
+
 
 /* Contact Section */
 .contact {
@@ -538,6 +587,7 @@ body {
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
+    border: 5px solid #FA9DAF;
     margin-bottom: 2rem;
 }
 
@@ -588,10 +638,43 @@ body {
         font-size: 2rem;
     }
 
+    .eco-image-container,
+    .eco-content,
     .craft-content,
     .wellness-content {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+    }
+
+    .hover-text{
+        max-width: 350px;
+        padding-left: 0;
+        padding-top: 8%;
+    }
+
+    .initial-text {
+        font-size: 3.5rem;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .main-title {
+        font-size: 6rem;
+    }
+
+    .subtitle-left {
+        font-size: 1.4rem;
+    }
+
+    .hi-title {
+        font-size: 5rem;
+    }
+
+    .hi-text {
+        text-align: justify;
+        padding-right: 10%;
     }
 
     .projects-images {
