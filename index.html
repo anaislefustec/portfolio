@@ -8,6 +8,8 @@
 
     <link rel="icon" type="favicon" href="media/favicon.ico">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Beth+Ellen&display=swap" rel="stylesheet">
@@ -17,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap"
-        rel="stylesheet">   
+        rel="stylesheet">
 
     <link rel="stylesheet" href="monsite.css">
 </head>
@@ -194,10 +196,56 @@
 
     <!-- Compétences Section -->
 
+
     <section class="competences">
         <div class="competences-content">
             <h2 class="competences-title">Mes Compétences</h2>
-            <div class="competences-grid">
+
+
+            <!-- Carousel -->
+
+            <div class="container swiper">
+                <div class="slider-wrapper">
+                    <div class="card-list swiper-wrapper">
+                        <div class="card-item swiper-slide">
+                            <img src="media/designer.png" alt="logo Affinity Designer">
+                            <h2 class="user-name bebas-neue">Affinity Designer</h2>
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <img src="media/designer.png" alt="logo">
+                            <h2 class="user-name bebas-neue">Affinity Photo</h2>
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <img src="media/designer.png" alt="logo">
+                            <h2 class="user-name bebas-neue">Illustrator</h2>
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <img src="media/designer.png" alt="logo">
+                            <h2 class="user-name bebas-neue">After Effects</h2>
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <img src="media/designer.png" alt="logo">
+                            <h2 class="user-name bebas-neue">Premiere pro</h2>
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <img src="media/designer.png" alt="logo">
+                            <h2 class="user-name bebas-neue">Blender</h2>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+            </div>
+
+            <!--<div class="competences-grid">
                 <div class="competence-category">
                     <h3 class="category-title">Design Graphique</h3>
                     <div class="skills-list">
@@ -225,7 +273,7 @@
                         <div class="skill-item">Stratégie de contenu</div>
                     </div>
                 </div>
-            </div>
+            </div>-->
             <div class="star-white-competences"></div>
         </div>
     </section>
@@ -253,6 +301,8 @@
     </section>
 
     <script src="monsite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="carousel.js"></script>
 
 </body>
 
