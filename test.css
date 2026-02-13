@@ -1,0 +1,1196 @@
+/* --- Variables & Reset --- */
+:root {
+    --bg-cream: #ffffff;
+    --orange: #FF5E1A;
+    --yellow: #FFC107;
+    --black: #1A1A1A;
+    --blue: #4F6DFF;
+    --font-display: "Londrina Solid", sans-serif;
+    --font-script: "Beth Ellen", cursive;
+    --font-body: "Space Grotesk", Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-cream);
+    color: var(--black);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+/* --- Navigation (Nouveau) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: var(--bg-cream);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px
+}
+
+.logo {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--orange);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+    color: var(--orange);
+        border-bottom: 2px solid var(--black);
+
+}
+
+
+/*.hero-img {
+    height: 820px;
+    width: 1720px;
+}*/
+
+/* --- HERO COLLAGE --- */
+
+.hero-collage {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    /* Prend tout l'écran */
+    background-color: var(--bg-cream);
+    /* VOTRE COULEUR DE FOND */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Le Titre Central (Statique) */
+.hero-static-content {
+    position: relative;
+    z-index: 1;
+    /* Derrière les images déplacées */
+    text-align: center;
+    pointer-events: none;
+    /* Important : permet de cliquer à travers le texte si besoin */
+    user-select: none;
+}
+
+.hero-static-content .main-title {
+    font-family: var(--font-display);
+    font-size: 8rem;
+    color: var(--orange);
+    line-height: 0.9;
+    text-shadow: 4px 4px 0px var(--black);
+    /* Changé en noir pour le contraste sur fond crème */
+    margin: 10px 0;
+}
+
+.hero-static-content .subtitle-top,
+.hero-static-content .subtitle-left {
+    font-family: var(--font-script);
+    color: var(--black);
+    font-size: 1.5rem;
+}
+
+/* --- LOGIQUE DRAGGABLE GÉNÉRALE --- */
+.draggable-item {
+    position: absolute;
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s ease-out;
+    /* Fluidité */
+}
+
+.draggable-item:active {
+    cursor: grabbing;
+    transform: scale(1.05) !important;
+    /* Petit pop quand on clique */
+}
+
+.draggable-item img {
+    display: block;
+    height: auto;
+    pointer-events: none;
+    /* Empêche le navigateur de draguer l'image fantôme */
+}
+
+.item-camera {
+    top: 20%;
+    left: 5%;
+    transform: rotate(-15deg);
+    z-index: 2;
+}
+
+.item-camera img {
+    width: 320px;
+}
+
+.item-noeud {
+    top: 2%;
+    left: 2%;
+    transform: rotate(-20deg);
+    z-index: 3;
+}
+
+.item-noeud img {
+    width: 230px;
+}
+
+/* 6. Illustrator (Droite) */
+.item-ai {
+    top: 25%;
+    right: 5%;
+    transform: rotate(10deg);
+    z-index: 2;
+}
+
+.item-ai img {
+    width: 100px;
+    border-radius: 18px;
+}
+
+/* 7. Crayon (Nouveau - Droite Vertical) */
+.item-crayon {
+    top: 45%;
+    right: 2%;
+    transform: rotate(45deg);
+    z-index: 3;
+}
+
+.item-crayon img {
+    width: 80px;
+}
+
+/* 8. Polaroid (Droite Bas) */
+.item-polaroid {
+    top: 55%;
+    left: 20%;
+    transform: rotate(-5deg);
+    z-index: 2;
+}
+
+.item-polaroid img {
+    width: 280px;
+}
+
+/* Fond gris du polaroid */
+.polaroid-bg {
+    position: absolute;
+    top: 5%;
+    left: -15%;
+    z-index: -1;
+}
+
+/* 11. Mégaphone (Bas Gauche) */
+.item-megaphone {
+    bottom: 10%;
+    left: 70%;
+    transform: rotate(15deg);
+    z-index: 3;
+}
+
+.item-megaphone img {
+    width: 380px;
+}
+
+/* 12. Clap Cinéma (Milieu Gauche) */
+.item-clap {
+    top: 50%;
+    left: 18%;
+    transform: rotate(8deg);
+    z-index: 2;
+}
+
+.item-clap img {
+    width: 200px;
+}
+
+/* 14. Curseur (Flottant sur le titre) */
+.item-cursor {
+    top: 55%;
+    left: 58%;
+    transform: rotate(-20deg);
+    z-index: 10;
+    /* Toujours au dessus */
+}
+
+.item-cursor img {
+    width: 150px;
+}
+
+/* --- RESPONSIVE (Ajustements Mobile) --- */
+@media (max-width: 768px) {
+    /* On réduit et on cache certains éléments sur mobile pour ne pas surcharger */
+
+    .item-camera img, .item-noeud img, .item-crayon img, .item-clap img, .item-cursor img, .item-megaphone img, .item-polaroid img, .item-ai img {
+        width: 0;
+    }
+
+    .hero-static-content .main-title {
+        font-size: 4rem;
+    }
+
+    .hero-collage {
+        min-height: 50vh;
+    }
+
+
+}
+
+
+
+/* --- SECTION ABOUT STYLE "ZINE" --- */
+
+.about-zine-section {
+    padding: 8rem 5%;
+    background-color: var(--bg-cream);
+    /* Petite texture papier subtile en fond */
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23000000' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+    overflow: hidden;
+}
+
+.zine-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2 Colonnes égales */
+    gap: 80px;
+    align-items: start;
+}
+
+/* --- COLONNE GAUCHE (TEXTE) --- */
+
+.zine-title {
+    font-family: var(--font-display);
+    font-size: 4.5rem;
+    color: var(--black);
+    line-height: 1;
+    margin-bottom: 2rem;
+    /* Petit effet tampon */
+    transform: rotate(-2deg);
+    display: inline-block;
+}
+
+.zine-intro {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    color: #333;
+    max-width: 90%;
+}
+
+.zine-block {
+    margin-bottom: 3rem;
+}
+
+.zine-subtitle {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--black);
+    border-bottom: 3px solid var(--black);
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+/* Style Timeline */
+.timeline-item {
+    margin-bottom: 2rem;
+    padding-left: 15px;
+    border-left: 2px dashed #ccc; /* Ligne pointillée verticale */
+}
+
+/* LA DATE MANUSCRITE ROUGE (Comme sur la photo) */
+.zine-date {
+    font-family: var(--font-body); /* Beth Ellen */
+    color: var(--orange); /* On utilise ton orange au lieu du rouge */
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.job-title {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.job-place {
+    font-size: 1rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+/* Tags noirs arrondis */
+.tags-row {
+    display: flex;
+    gap: 10px;
+}
+
+.mini-tag {
+    background: var(--black);
+    color: white;
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Liste Intérêts */
+.interests-list {
+    list-style: none;
+    padding: 0;
+}
+
+.interests-list li {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+/* --- COLONNE DROITE (VISUELS) --- */
+
+.zine-visual-col {
+    position: relative;
+    padding-top: 50px;
+}
+
+/* Cadre Photo */
+.photo-frame {
+    z-index: 2;
+    transform: rotate(2deg); /* Légère inclinaison naturelle */
+    display: inline-block;
+}
+
+.main-photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    /* Effet "Photo Journal" : N&B + Grain */
+    border: 4px solid var(--black); /* Cadre noir comme sur la photo */
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.15);
+}
+
+/* Sticker collé SUR la photo */
+.sticker-on-photo {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 120px;
+    transform: rotate(-10deg);
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.3));
+    z-index: 3;
+}
+
+/* Éléments Flottants Autour */
+.floating-deco {
+    position: absolute;
+    z-index: 1; /* Derrière la photo parfois */
+}
+
+.floating-deco img {
+    width: 100%;
+    height: auto;
+}
+
+.d-1 { /* Curseur */
+    width: 60px;
+    top: 0;
+    right: 50px;
+    transform: rotate(20deg);
+    z-index: 3;
+}
+
+.d-2 { /* Advisory */
+    width: 80px;
+    bottom: 50px;
+    left: -40px;
+    transform: rotate(-15deg);
+    z-index: 3;
+}
+
+.d-3 { /* Fleur */
+    width: 150px;
+    top: -40px;
+    left: -40px;
+    z-index: 0; /* Derrière la photo */
+    opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .zine-container {
+        grid-template-columns: 1fr; /* Une seule colonne */
+        gap: 50px;
+    }
+
+    .zine-visual-col {
+        text-align: center;
+        order: -1; /* Mettre la photo EN PREMIER sur mobile ? Sinon enlever cette ligne */
+        padding-top: 0;
+    }
+
+    .photo-frame {
+        transform: rotate(0deg);
+    }
+    
+    .zine-title {
+        font-size: 3.5rem;
+    }
+}
+
+/* --- SECTION PARCOURS --- */
+
+.parcours-clean {
+    background-color: var(--bg-cream);
+    padding: 6rem 5%;
+    color: var(--black);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.title-clean {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    color: var(--black);
+    line-height: 1;
+}
+
+.highlight {
+    color: var(--orange);
+    border-bottom: 4px solid var(--black);
+    display: inline-block;
+    line-height: 0.8;
+}
+
+/* GRILLE DU PARCOURS */
+.timeline-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.timeline-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    padding: 40px 0;
+    align-items: flex-start;
+    transition: transform 0.3s ease;
+}
+
+.timeline-row:hover {
+    transform: translateX(10px);
+}
+
+.divider {
+    border: none;
+    height: 2px;
+    background-color: var(--black);
+    opacity: 0.1;
+    margin: 0;
+}
+
+.year-col {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.year-big {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    line-height: 1;
+    color: var(--orange);
+}
+
+.year-big.outline {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--black);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.timeline-row:hover .year-big.outline {
+    color: var(--black);
+    opacity: 1;
+}
+
+.status-badge {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: var(--black);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50px;
+    margin-top: 10px;
+    transform: rotate(-2deg);
+}
+
+/* COLONNE CONTENU (DROITE) */
+.content-col {
+    padding-top: 10px;
+}
+
+.role-title {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    color: var(--black);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.place {
+    font-family: var(--font-body);
+    font-weight: bold;
+    color: var(--orange);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.description {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    max-width: 90%;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+    .title-clean {
+        font-size: 3.5rem;
+    }
+
+    .timeline-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: left;
+        padding: 30px 0;
+    }
+
+    .year-col {
+        align-items: flex-start;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .year-big {
+        font-size: 3.5rem;
+    }
+
+    .role-title {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* --- Projets --- */
+.projects-header {
+    background: var(--bg-cream);
+    padding: 4rem 5% 2rem;
+    text-align: center;
+}
+
+.projects-title {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    color: var(--orange);
+}
+
+.projects-notebook-section {
+    background: var(--bg-cream);
+    padding: 6rem 5%;
+}
+
+.projects-notebook-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.notebook-card {
+    background: white;
+    padding: 1.5rem;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    background-image: radial-gradient(circle, #e0e0e0 20%, transparent 20%), radial-gradient(circle, #e0e0e0 20%, transparent 20%);
+    background-position: 20px 15px, 50px 15px;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+}
+
+.notebook-card:hover {
+    transform: scale(105%);
+    transition: 0.3s;
+}
+
+.card-yellow {
+    background-color: #fffdf0;
+}
+
+.card-orange {
+    background-color: #fff5f0;
+}
+
+
+.paper-clip {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    z-index: 10;
+    color: #555;
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(2px 3px 1px rgba(0, 0, 0, 0.2));
+}
+
+
+.pinned-image-container {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    margin-top: 10px;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px solid var(--black);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    background: white;
+}
+
+.notebook-card:hover .pinned-image-container {
+    transform: rotate(0deg) scale(1.02) !important;
+}
+
+.pinned-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.notebook-content {
+    text-align: left;
+    padding: 0 10px;
+}
+
+.notebook-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--black);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    border-bottom: 2px solid var(--black);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.notebook-lines {
+    background-image: linear-gradient(transparent 95%, #ccc 95%);
+    background-size: 100% 30px;
+    padding-top: 5px;
+}
+
+.notebook-desc {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    color: var(--black);
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0;
+}
+
+.author-line {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 5px;
+    line-height: 30px;
+    text-align: right;
+}
+
+/* Ajustement Mobile */
+@media (max-width: 768px) {
+    .projects-notebook-container {
+        padding: 0 10px;
+        gap: 50px;
+    }
+
+    .notebook-title {
+        font-size: 1.8rem;
+    }
+
+    .pinned-image-container {
+        height: 200px;
+    }
+}
+
+.competences-title {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .main-title {
+        font-size: 4rem;
+    }
+
+    .hero-img-framed {
+        width: 280px;
+        margin-bottom: 30px;
+    }
+
+    .hi-text-container {
+        flex-direction: column;
+    }
+
+    .project-details {
+        flex-direction: column;
+    }
+
+    .project-name {
+        font-size: 2.5rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+
+
+
+/* --- SECTION SKILLS (Carousel Auto) --- */
+
+.skills-minimal-section {
+    padding: 5rem 0;
+    background-color: var(--bg-cream);
+    overflow: hidden;
+}
+
+.skills-minimal-section .title-clean {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: var(--font-titre); /* Assure-toi d'avoir ta variable titre */
+}
+
+/* LE CONTENEUR WRAPPER */
+.minimal-wrapper {
+    position: relative;
+    max-width: 80%; /* On prend toute la largeur pour le défilement */
+    margin: 0 auto;    
+    padding: 0;   
+}
+
+/* SWIPER */
+.swiper.swiperMinimal {
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+/* IMPORTANT : Pour que le défilement soit continu et linéaire (pas d'arrêt) */
+.swiperMinimal .swiper-wrapper {
+    transition-timing-function: linear;
+}
+
+/* Masquer flèches et pagination si elles sont encore dans le HTML */
+.swiper-button-next, 
+.swiper-button-prev, 
+.swiper-pagination {
+    display: none !important;
+}
+
+/* L'ITEM (LOGO + TEXTE) */
+.minimal-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* On garde l'opacité à 1 tout le temps vu que ça tourne */
+    opacity: 0.8; 
+    transition: opacity 0.3s;
+}
+
+.minimal-item:hover {
+    opacity: 1;
+}
+
+.mini-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.mini-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+}
+
+.mini-name {
+    font-family: var(--font-body); /* Ou var(--font-corps) selon ton fichier */
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: var(--black);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .minimal-item {
+        transform: scale(0.9); /* Légèrement plus petit sur mobile */
+    }
+}
+
+/* 3. FOOTER BAS */
+.inz-footer {
+    font-family: var(--font-body);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    border-top: 3px solid var(--black);
+    padding-top: 15px;
+}
+
+/* --- FLÈCHES DE NAVIGATION --- */
+.inzmo-arrow {
+    width: 60px;
+    height: 60px;
+    background-color: var(--black);
+    color: white !important; /* Couleur de la flèche svg */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    /* On les positionne en dehors du slider */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.inzmo-arrow:after {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.swiper-button-prev.inzmo-arrow { left: 0; }
+.swiper-button-next.inzmo-arrow { right: 0; }
+
+.inzmo-arrow:hover {
+    background-color: var(--orange);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .inzmo-wrapper {
+        padding: 0; /* Pas de marge sur mobile */
+    }
+    .inzmo-arrow {
+        display: none; /* On cache les flèches sur mobile (swipe au doigt) */
+    }
+    .inzmo-card {
+        height: 400px;
+    }
+    .inz-title {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+/* --- FOOTER STYLE TRUUS --- */
+
+.footer-truus-section {
+    background-color: var(--bg-cream); /* Fond de la page pour les coins arrondis */
+    padding: 2rem 2rem 0 2rem; /* Marges autour du bloc bleu */
+}
+
+.footer-container {
+    background-color: #4F6DFF; /* LE BLEU ÉLECTRIQUE (Remplace par var(--orange) si tu préfères) */
+    color: white;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding: 4rem 4rem 0 4rem;
+    position: relative;
+    overflow: hidden; /* Pour couper le texte en bas */
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+/* GRILLE DU HAUT */
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    position: relative;
+    z-index: 2; /* Au dessus du gros texte */
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* BADGES (Pillules blanches) */
+.pill-badge {
+    display: inline-block;
+    background: white;
+    color: var(--black);
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+}
+
+/* TYPOGRAPHIE COLONNES */
+.footer-heading {
+    font-family: var(--font-body); /* Space Grotesk */
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.footer-text {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-link.underline {
+    color: white;
+    text-decoration: underline;
+    font-family: var(--font-body);
+}
+
+.footer-email {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-subtext {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.footer-tiny {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* ICÔNES SOCIAUX (Simples textes cerclés ou juste texte) */
+.footer-socials {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s;
+}
+
+.footer-socials a:hover {
+    transform: scale(1.1);
+}
+
+/* PARTIE BASSE : DÉCO ET GROS TEXTE */
+.footer-bottom-deco {
+    position: relative;
+    text-align: center;
+    margin-top: 3rem;
+    /* Pour que le bas du texte soit coupé par le bas du footer */
+    margin-bottom: -3rem; 
+}
+
+/* Le Texte Géant */
+.giant-name {
+    font-family: var(--font-display); /* Londrina Solid */
+    font-size: 25vw; /* Taille relative à la largeur de l'écran (ÉNORME) */
+    color: #F2EFE9; /* Blanc cassé / Crème */
+    line-height: 0.7;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* LES STICKERS FLOTTANTS */
+.footer-sticker {
+    position: absolute;
+    z-index: 3;
+    filter: drop-shadow(5px 5px 0px rgba(0,0,0,0.2));
+    transition: transform 0.3s;
+}
+
+.footer-sticker:hover {
+    transform: scale(1.1) rotate(0deg) !important;
+}
+
+/* Positions spécifiques des stickers (à ajuster selon tes goûts) */
+.s-1 {
+    width: 120px;
+    top: -20%;
+    left: 20%;
+    transform: rotate(-15deg);
+}
+
+.s-2 {
+    width: 100px;
+    top: 10%;
+    left: 45%;
+    transform: rotate(10deg);
+}
+
+.s-3 {
+    width: 140px;
+    top: -30%;
+    right: 15%;
+    transform: rotate(20deg);
+}
+
+.s-4 {
+    width: 130px;
+    bottom: 40%;
+    left: 5%;
+    transform: rotate(-25deg);
+}
+
+/* Badge Credits en bas à droite */
+.credits-pill {
+    position: absolute;
+    bottom: 5rem;
+    right: 0;
+    background: black;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 10;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 2rem;
+    }
+
+
+
+    .footer-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .giant-name {
+        font-size: 35vw;
+        padding-top: 50px;
+    }
+
+    .footer-sticker {
+        width: 80px;
+    }
+    
+    .s-1 { width: 0}
+    .s-3 { width: 0}
+    .s-2 { width: 0}
+    .s-4 { width: 0}
+
+    .credits-pill {
+        width: 0;
+        height: 0;
+        font-size: 0;
+    }
+}

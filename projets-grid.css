@@ -1,0 +1,61 @@
+.sketch-layout.grid-mode {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #333;
+}
+
+/* --- Header --- */
+.sketch-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.sketch-title { font-size: 4rem; margin-bottom: 20px; font-weight: 700; }
+.sketch-intro-text { font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto; }
+
+/* --- La Grille (GRID) --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px; 
+    margin-bottom: 80px;
+}
+
+/* --- Chaque Élément (Item) --- */
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+.grid-image-wrapper {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    margin-bottom: 15px;
+    border: 1px solid rgb(79, 76, 76);
+
+
+}
+
+.grid-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.grid-item:hover .grid-image-wrapper img { opacity: 0.9; }
+
+.grid-infos { padding: 0 5px; }
+.grid-infos h3 { font-size: 1.1rem; margin: 0 0 5px 0; font-weight: 600; color: #222; }
+.grid-desc { font-size: 0.9rem; color: #777; font-style: italic; }
+
+.hand-line { height: 1px; background: #ddd; width: 100%; margin: 0 auto; }

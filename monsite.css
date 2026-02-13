@@ -31,7 +31,6 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    position: relative;
     overflow: hidden;
 }
 
@@ -42,10 +41,8 @@ body {
 }
 
 .hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.7);
+    height: 780px;
+    width: 1720px;
 }
 
 .hero-overlay {
@@ -54,7 +51,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /*background: linear-gradient(45deg, rgba(255, 107, 53, 0.3), rgba(247, 147, 30, 0.3));*/
 }
 
 .hero-text {
@@ -96,7 +92,7 @@ body {
 
 /* Hi There Section */
 .hi-there {
-    background: #e9dccc;
+    background: #fd5d00;
     padding: 4rem 8%;
     position: relative;
     padding-right: 0;
@@ -140,8 +136,6 @@ body {
 
 #hi-img {
     width: 100%;
-    height: 65vh;
-    object-fit: cover;
     margin-left: 10%;
 }
 
@@ -255,6 +249,22 @@ body {
 
 
 /* Projects Section */
+
+input, ul.submenu {
+  display: none;
+}
+
+label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+input:checked~ul.submenu {
+  display: block;
+}
+
+
 .projects {
     background: #FF6B35;
     padding: 4rem 8%;
@@ -269,7 +279,7 @@ body {
 
 .projects-title {
     font-family: "Londrina Solid";
-    font-size: 8rem;
+    font-size: 5rem;
     color: #FFD700;
     font-weight: 900;
 }
@@ -307,7 +317,18 @@ body {
     color: #FF6B35;
 }
 
-/* Eco Skincare Section */
+/* HEOL */
+
+#projetheol {
+    display: flex;
+}
+
+#identite {
+    height: 50%;
+    width: 50%;
+    border-radius: 2%;
+}
+
 .eco-skincare {
     background: #F7931E;
     padding: 4rem 8%;
