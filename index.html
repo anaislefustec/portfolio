@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anaïs Le Fustec - Portfolio</title>
+
+    <link rel="icon" type="favicon" href="media/dessin.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beth+Ellen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">a.</div>
+        <ul class="nav-links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#parc">Parcours</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero-collage" id="home">
+
+        <div class="hero-static-content">
+            <span class="subtitle-top">Bienvenue sur mon</span>
+            <h1 class="main-title">PORTFOLIO <br>CRÉATIF</h1>
+            <div class="subtitle-container">
+                <span class="subtitle-left">Communication & Design graphique</span>
+            </div>
+        </div>
+
+        <div class="draggable-item item-camera">
+            <img src="media/appareil.png" alt="Appareil">
+        </div>
+
+        <div class="draggable-item item-crayon">
+            <img src="media/crayon.PNG" alt="Crayon">
+        </div>
+
+        <div class="draggable-item item-noeud">
+            <img src="media/noeud.png" alt="Noeud vert">
+        </div>
+
+        <div class="draggable-item item-ai">
+            <img src="media/illustrator.png" alt="Illustrator Logo">
+        </div>
+
+        <div class="draggable-item item-clap">
+            <img src="media/clap.png" alt="Clap cinéma">
+        </div>
+
+        <div class="draggable-item item-megaphone">
+            <img src="media/megaphone.png" alt="Mégaphone">
+        </div>
+
+        <div class="draggable-item item-cursor">
+            <img src="media/le-curseur-orange.png" alt="Curseur Souris">
+        </div>
+
+    </section>
+
+
+
+    <section class="about-zine-section" id="about">
+
+        <div class="zine-container">
+
+            <div class="zine-text-col">
+
+                <h2 class="zine-title">À Propos</h2>
+                <p class="zine-intro">
+                    Je suis Anaïs, étudiante en 3ème année de BUT Métiers du Multimédia et de l'internet basée en Bretagne.
+                    <br><br>
+                    Actuellement en alternance à l'office de Tourisme de Lannion, j'applique mes compétences au service d'une problèmatique d'entreprise à travers des créations multimédia et des articles de site web.
+                </p>
+
+                <div class="zine-block">
+                    <h3 class="zine-subtitle">PARCOURS</h3>
+
+                    <div class="timeline-item">
+                        <span class="zine-date">Sept 2025 — En cours</span>
+                        <h4 class="job-title">Assistante de Communication en alternance</h4>
+                        <p class="job-place">Office de Tourisme Côte de Granit Rose</p>
+                        <div class="tags-row">
+                            <span class="mini-tag">Gestion et rédaction d'articles</span>
+                            <span class="mini-tag">Création de contenu print et digital</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="zine-date">Avril — Juin 2025</span>
+                        <h4 class="job-title">Chargée de communication en stage</h4>
+                        <p class="job-place">Cycles Roold</p>
+                        <div class="tags-row">
+                            <span class="mini-tag">Gestion des réseaux sociaux</span>
+                            <span class="mini-tag">Rédaction d'articles</span>
+                            <span class="mini-tag">Création de contenu multimédia</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="zine-date">2023 — 2026</span>
+                        <h4 class="job-title">BUT Métiers du Multimédia et de l'Internet</h4>
+                        <p class="job-place">IUT de Lannion</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="zine-visual-col">
+
+                <div class="photo-frame">
+                    <img src="media/moi.png" alt="Portrait Anaïs" class="main-photo">
+                </div>
+
+                <div class="floating-deco d-2">
+                    <img src="media/le-curseur-orange.png" alt="Cursor">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!--<section class="parcours-clean" id="parc">
+
+        <div class="section-header">
+            <h2 class="title-clean">MON PARCOURS <span class="highlight">PRO</span></h2>
+        </div>
+
+        <div class="timeline-container">
+
+            <div class="timeline-row">
+                <div class="year-col">
+                    <span class="year-big">2025</span>
+                    <span class="status-badge">En cours</span>
+                </div>
+                <div class="content-col">
+                    <h3 class="role-title">Chargée de Com' & Graphisme</h3>
+                    <p class="place">📍 Dernière année en alternance à l'Office de Tourisme Côte de Granit Rose</p>
+                    <p class="description">
+                        Gestion et rédaction d'articles sur le site web et création de contenu print et digital
+                    </p>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="timeline-row">
+                <div class="year-col">
+                    <span class="year-big outline">2024</span>
+                </div>
+                <div class="content-col">
+                    <h3 class="role-title">Stagiaire Graphiste</h3>
+                    <p class="place">📍 Deuxième année de mon BUT et stage chez Cycles Roold</p>
+                    <p class="description">
+                        Création de contenu, gestion des réseaux sociaux et rédaction d'articles pour le site web
+                    </p>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+
+            <div class="timeline-row">
+                <div class="year-col">
+                    <span class="year-big outline">2023</span>
+                </div>
+                <div class="content-col">
+                    <h3 class="role-title">Les débuts</h3>
+                    <p class="place">📍 Première année de mon BUT Métiers de Multimédia et de l'Internet</p>
+                    <p class="description">
+                        Découverte de la formation tout en créativité : suite Adobe, Affinity, premières affiches,
+                        permiers montages vidéo, exploration de la photographie et premiers sites web codés. Le début de
+                        l'aventure.
+                    </p>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="timeline-row">
+                <div class="year-col">
+                    <span class="year-big outline">AVANT</span>
+                </div>
+                <div class="content-col">
+                    <h3 class="role-title">Bac Général Scientifique</h3>
+                    <p class="place">📍 Lycée Félix Le Dantec</p>
+                    <p class="description">
+                        Spécialités Mathématiques & Physique-Chimie. <br>
+                        <strong>Diplômée avec Mention Bien.</strong> <br>
+                        Rigueur et analyse au service de la créativité.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>-->
+
+    <div id="projets"></div>
+
+    <section class="projects-header">
+        <h2 class="projects-title">MES PROJETS</h2>
+    </section>
+
+    <section class="projects-notebook-section">
+        <div class="projects-notebook-container">
+
+                        <div class="notebook-card card-yellow">
+                <div class="paper-clip">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                    </svg>
+                </div>
+                <div class="pinned-image-container" style="transform: rotate(3deg);">
+                    <img src="media/cdgr-couv.png" alt="Présentation avec les couleurs de la marque Orange">
+                </div>
+                <div class="notebook-content">
+                    <h3 class="notebook-title">Alternance à l'Office de tourisme</h3>
+                    <div class="notebook-lines">
+                        <p class="notebook-desc">Rédaction d'articles et création de contenu</p>
+                        <span class="author-line">2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="projets-grid.html?id=roold">
+                <div class="notebook-card card">
+                    <div class="paper-clip">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                        </svg>
+                    </div>
+                    <div class="pinned-image-container" style="transform: rotate(3deg);">
+                        <img src="media/roold-moodboard.jpg" alt="Moodboard de la marque roold">
+                    </div>
+                    <div class="notebook-content">
+                        <h3 class="notebook-title">Stage chez Roold</h3>
+                        <div class="notebook-lines">
+                            <p class="notebook-desc">Création de contenu multimédia et gestion des réseaux</p>
+                            <span class="author-line">2025</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="projets.html?id=yubaba">
+                <div class="notebook-card card-orange">
+                    <div class="paper-clip">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                        </svg>
+                    </div>
+                    <div class="pinned-image-container" style="transform: rotate(3deg);">
+                        <img src="media/yababa.png" alt="Photo de la devanture de l'atelier dolmen protect">
+                    </div>
+                    <div class="notebook-content">
+                        <h3 class="notebook-title">Yubaba's Bathhouse App</h3>
+                        <div class="notebook-lines">
+                            <p class="notebook-desc">Développement d'une application fictive</p>
+                            <span class="author-line">2025</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="projets.html?id=heol">
+                <div class="notebook-card">
+                    <div class="paper-clip">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                        </svg>
+                    </div>
+                    <div class="pinned-image-container">
+                        <img src="media/logo - mockups.png" alt="Projet Heol">
+                    </div>
+                    <div class="notebook-content">
+                        <h3 class="notebook-title">HEOL</h3>
+                        <div class="notebook-lines">
+                            <p class="notebook-desc">Identité visuelle et stratégie digitale</p>
+                            <span class="author-line">2025</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="projets.html?id=haze">
+                <div class="notebook-card card-yellow">
+                    <div class="paper-clip">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                        </svg>
+                    </div>
+                    <div class="pinned-image-container" style="transform: rotate(-2deg);">
+                        <img src="media/haze-fond.png"
+                            alt="Logo noir en forme d'oeil avec écrit HAZE sur un fond avec différentes teintes de vert">
+                    </div>
+                    <div class="notebook-content">
+                        <h3 class="notebook-title">HAZE AGENCY</h3>
+                        <div class="notebook-lines">
+                            <p class="notebook-desc">Identité visuelle</p>
+                            <span class="author-line">2025</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <div class="notebook-card card-yellow">
+                <div class="paper-clip">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                    </svg>
+                </div>
+                <div class="pinned-image-container" style="transform: rotate(-3deg);">
+                    <img src="media/orange-projet.png" alt="Présentation avec les couleurs de la marque Orange">
+                </div>
+                <div class="notebook-content">
+                    <h3 class="notebook-title">Projet Orange</h3>
+                    <div class="notebook-lines">
+                        <p class="notebook-desc">Recherches et production audiovisuelle</p>
+                        <span class="author-line">2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="projets.html?id=dolmen">
+                <div class="notebook-card card-orange">
+                    <div class="paper-clip">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                        </svg>
+                    </div>
+                    <div class="pinned-image-container" style="transform: rotate(3deg);">
+                        <img src="media/dolmen.png" alt="Photo de la devanture de l'atelier dolmen protect">
+                    </div>
+                    <div class="notebook-content">
+                        <h3 class="notebook-title">Dolmen Protect</h3>
+                        <div class="notebook-lines">
+                            <p class="notebook-desc">Stratégie de communication</p>
+                            <span class="author-line">2024</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="projets.html?id=diorama">
+                <div class="notebook-card card-orange">
+                    <div class="paper-clip">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                        </svg>
+                    </div>
+                    <div class="pinned-image-container" style="transform: rotate(3deg);">
+                        <img src="media/diorama-photo.png"
+                            alt="diorama 3d représentant une petite ile avec une maison, une route et une soucoupe volante">
+                    </div>
+                    <div class="notebook-content">
+                        <h3 class="notebook-title">Diorama 3D</h3>
+                        <div class="notebook-lines">
+                            <p class="notebook-desc">Modélisme et shading</p>
+                            <span class="author-line">2024</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+
+
+            <div class="notebook-card card">
+                <div class="paper-clip">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                    </svg>
+                </div>
+                <div class="pinned-image-container" style="transform: rotate(-3deg);">
+                    <img src="media/" alt="Projet Wellness">
+                </div>
+                <div class="notebook-content">
+                    <h3 class="notebook-title">Tarot divinatoire</h3>
+                    <div class="notebook-lines">
+                        <p class="notebook-desc">Design de produit</p>
+                        <span class="author-line">2024</span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <section class="skills-deck-section">
+
+        <section class="skills-minimal-section" id="skills">
+
+            <div class="section-header">
+                <h2 class="competences-title">MES OUTILS</h2>
+            </div>
+
+            <div class="minimal-wrapper">
+
+                <div class="swiper-button-prev mini-arrow"></div>
+
+                <div class="swiper swiperMinimal">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide minimal-item">
+                            <div class="mini-icon">
+                                <img src="media/illustrator.png" alt="Illustrator">
+                            </div>
+                            <p class="mini-name">Illustrator</p>
+                        </div>
+
+                        <div class="swiper-slide minimal-item">
+                            <div class="mini-icon">
+                                <img src="media/affinity-logo.png" alt="Photoshop">
+                            </div>
+                            <p class="mini-name">Affinity</p>
+                        </div>
+
+                        <div class="swiper-slide minimal-item">
+                            <div class="mini-icon">
+                                <img src="media/aftereffects.png" alt="After Effects">
+                            </div>
+                            <p class="mini-name">After Effects</p>
+                        </div>
+
+                        <div class="swiper-slide minimal-item">
+                            <div class="mini-icon">
+                                <img src="media/premierepro.png" alt="Premiere">
+                            </div>
+                            <p class="mini-name">Premiere Pro</p>
+                        </div>
+
+                        <div class="swiper-slide minimal-item">
+                            <div class="mini-icon">
+                                <img src="media/davinci.png" alt="Da Vinci Resolve">
+                            </div>
+                            <p class="mini-name">Da Vinci Resolve</p>
+                        </div>
+
+                        <div class="swiper-slide minimal-item">
+                            <div class="mini-icon">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg"
+                                    alt="Figma">
+                            </div>
+                            <p class="mini-name">Figma</p>
+                        </div>
+
+                        <div class="swiper-slide minimal-item">
+                            <div class="mini-icon">
+                                <img src="media/procreate-logo.png" alt="Procreate">
+                            </div>
+                            <p class="mini-name">Procreate</p>
+                        </div>
+
+                        <div class="swiper-slide minimal-item">
+                            <div class="mini-icon">
+                                <img src="media/conva.png" alt="Canva">
+                            </div>
+                            <p class="mini-name">Canva</p>
+                        </div>
+
+                        <div class="swiper-slide minimal-item">
+                            <div class="mini-icon">
+                                <img src="media/vscode.png" alt="Visual Studio Code">
+                            </div>
+                            <p class="mini-name">Visual Studio Code</p>
+                        </div>
+
+                        <div class="swiper-slide minimal-item">
+                            <div class="mini-icon">
+                                <img src="media/github.png" alt="GitHubDesktop">
+                            </div>
+                            <p class="mini-name">Git Hub</p>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="swiper-button-next mini-arrow"></div>
+
+            </div>
+        </section>
+
+
+    </section>
+
+    <footer class="footer-truus-section" id="contact">
+
+        <div class="footer-container">
+
+            <div class="footer-grid">
+
+                <div class="footer-col">
+                    <span class="pill-badge">contact</span>
+                    <p class="footer-email">anais.lefustec1@gmail.com</p>
+                    <p class="footer-email">07 68 48 34 05</p>
+                    <p class="footer-subtext">Envoyez-moi un message*</p>
+                    <p class="footer-tiny">*promis je réponds vite !</p>
+
+                    <div class="footer-socials">
+                        <a href="www.linkedin.com/in/anais-lefustec"><img src="media/linkedin.png"
+                                alt="Logo LinkedIn"></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <span class="pill-badge">Mon profil vous intéresse ?</span>
+                    <h3 class="footer-heading">Alternance & stage<br>Dispo dès maintenant</h3>
+                </div>
+
+                <div class="footer-col">
+                    <span class="pill-badge">localisation</span>
+                    <p class="footer-text">
+                        Basée à Lannion, Bretagne<br>
+                        Ouverte aux déplacements !
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom-deco">
+                <h1 class="giant-name">ANAÏS</h1>
+
+                <img src="media/best.png" class="footer-sticker s-1" alt="Best">
+
+                <img src="media/advisory.png" class="footer-sticker s-2" alt="Advisory">
+
+                <img src="media/appareil.png" class="footer-sticker s-3" alt="Camera">
+
+                <img src="media/clap.png" class="footer-sticker s-4" alt="Clap">
+
+                <div class="credits-pill">credits</div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="test.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="carousel.js"></script>
+
+</body>
+
+</html>

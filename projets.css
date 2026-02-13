@@ -1,0 +1,359 @@
+:root {
+    --bg-cream: #ffffff;
+    --orange: #FF5E1A;
+    --yellow: #FFC107;
+    --black: #1A1A1A;
+    --font-display: "Londrina Solid", sans-serif;
+    --font-script: "Beth Ellen", cursive;
+    --font-body: "Space Grotesk", Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-cream);
+    color: var(--black);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+.sketch-layout {
+    max-width: 1400px; /* Passé de 1000px à 1400px */
+    margin: 0 auto;
+    padding: 4rem 5%; /* Un peu plus d'espace en haut */
+    font-family: var(--font-body);
+    color: var(--black);
+}
+
+/* 1. HEADER */
+.sketch-header {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.sketch-date {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--black);
+    display: block;
+    margin-bottom: -10px; /* Colle un peu au titre */
+}
+
+.sketch-title {
+    font-family: var(--font-display); /* Votre police titre */
+    font-size: 6rem; /* Très gros comme sur le dessin */
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--black);
+    /* Petit effet "marker" */
+    text-shadow: 3px 3px 0px var(--orange);
+}
+
+.sketch-subtitle {
+    font-family: var(--font-display); /* Look manuscrit */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+/* 2. INTRO (Grid) */
+.sketch-grid-intro {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* Gauche plus large */
+    gap: 40px;
+    margin-bottom: 5rem;
+}
+
+.intro-visual-main img {
+    width: 100%;
+    height: 500px; /* Un peu plus haut vu qu'on est plus large */
+    object-fit: cover;
+    border: none; /* SUPPRESSION BORDURE */
+    border-radius: 15px; /* On garde juste un arrondi doux */
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.1); /* Ombre douce au lieu du trait */
+}
+
+/* Petite image Intro Droite */
+.intro-visual-small img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border: none; /* SUPPRESSION BORDURE */
+    border-radius: 10px;
+}
+
+.resume-lines p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    border-left: 3px solid var(--orange);
+    padding-left: 15px;
+}
+
+
+/* 3. PROJET (Grid) */
+.sketch-grid-projet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 5rem;
+    margin-left: 20px;
+}
+
+.project-description {
+    margin-bottom: 20px;
+    line-height: 1.8rem; 
+    padding-top: 2px;
+}
+
+.project-palette {
+    display: flex;
+    gap: 15px;
+}
+
+.color-swatch img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.projet-visual-col img {
+    width: 60%;
+    height: 400px;
+    object-fit: cover;
+    border: none;
+    border-radius: 15px;
+    transform: rotate(5deg);
+    margin-left: 100px;
+}
+
+/* --- SECTION ÉTAPES : EFFET EXPANDING CARDS --- */
+
+.sketch-steps {
+    margin-bottom: 5rem;
+}
+
+.steps-container {
+    display: flex; 
+    gap: 15px;     
+    height: 450px; 
+    width: 100%;
+}
+
+.step-card {
+    position: relative;
+    flex: 1; 
+    border: 3px solid var(--black);
+    border-radius: 30px; 
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.7s;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+
+}
+
+.step-card:hover {
+    flex: 4; 
+}
+
+/* --- LE CONTENU TEXTE --- */
+.step-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+    opacity: 1;
+}
+
+.step-card h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px black;
+    white-space: nowrap;
+}
+
+.step-card p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    display: none;
+}
+
+/* QUAND LA CARTE EST OUVERTE (HOVER) */
+.step-card:hover p {
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+}
+
+.step-card:hover h3 {
+    font-size: 3rem; /* Le titre grossit */
+}
+
+.card-bg-1 {
+    background-image: url('media/illustrator.png');
+    background-color: #fff;
+}
+
+.card-bg-2 {
+    background-image: url('media/heol\ mockup.png');
+    background-color: #fff;
+}
+
+.card-bg-3 {
+    background-image: url('media/logo\ -\ mockups.png');
+    background-color: #fff;
+}
+
+.card-bg-4 {
+    background-image: url('media/heol-mac.jpg');
+    background-color: #fff;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+    .steps-container {
+        flex-direction: column; /* Sur mobile, on empile verticalement */
+        height: auto;
+    }
+    
+    .step-card {
+        height: 100px; /* Cartes fines fermées */
+        width: 100%;
+        flex: none; /* On désactive le flex grow horizontal */
+    }
+    
+    .step-card:hover {
+        height: 250px; /* S'ouvre en hauteur */
+        flex: none;
+    }
+}
+
+/* 5. SKILLS (2 Colonnes) */
+.sketch-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 5rem;
+    color: var(--orange);
+}
+
+.skill-list-lines {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list-lines li {
+    border-bottom: 2px solid var(--black);
+    padding: 10px 0;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+}
+
+/* 6. RÉSULTATS (Layout Masonry manuel) */
+.sketch-results {
+    margin-bottom: 5rem;
+}
+
+.results-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.res-item {
+    border: none; /* SUPPRESSION BORDURE */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Légère ombre pour détacher du fond */
+    transition: transform 0.3s ease;
+}
+
+.res-item:hover {
+    transform: translateY(-5px); /* Petit effet de levée au survol */
+}
+
+.res-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Configuration des tailles basée sur le dessin */
+.res-item.horizontal {
+    width: calc(50% - 10px);
+    height: 150px;
+}
+
+.res-item.vertical {
+    width: calc(50% - 10px);
+    height: 350px;
+}
+
+.res-item.square {
+    width: calc(33.33% - 14px);
+    height: 150px;
+}
+
+/* 7. FOOTER NAV */
+.sketch-footer-nav {
+    text-align: right;
+    margin-bottom: 4rem;
+    padding-top: 2rem;
+}
+
+.sketch-footer-nav a {
+    font-family: var(--font-display); /* Style manuscrit */
+    font-size: 3rem;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.sketch-footer-nav a:hover {
+    color: var(--orange);
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+    .sketch-title { font-size: 5rem; }
+    
+    .sketch-grid-intro, 
+    .sketch-grid-projet, 
+    .steps-container, 
+    .sketch-skills {
+        grid-template-columns: 1fr; /* Tout en une colonne */
+        gap: 60px;
+    }
+
+    /* Pour la grille résultat sur mobile */
+    .res-item.horizontal, 
+    .res-item.vertical, 
+    .res-item.square {
+        width: 100%; /* Pleine largeur */
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+
+    .projet-visual-col img {
+        margin-left: 50px;
+    }
+}
+
