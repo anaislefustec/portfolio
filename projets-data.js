@@ -20,7 +20,7 @@ const projectsData = {
             description: `L’objectif de cette semaine de production est de réaliser un calendrier de l’avent sur le thème du film d’animation Le voyage de Chihiro. Pour ce projet, nous avions une ligne conductrice principale : mettre en valeur les bright patterns à contrario des dark patterns.
                             Pour arriver à nos fins, du fait que ce projet est fictif, nous devions choisir un commanditaire, ses cibles mais aussi l’axe qu’il choisit de donner à son calendrier. 
                             Dans ce projet la seule contrainte était l’imagination du créateur, nous avions la liberté de choisir l’univers graphique, le ton à utiliser et le contenu des cases elles mêmes. 
-                            La finalité du projet se concrétise en le proposant sur un stand de présentation en lien avec le projet. Chaque équipe présente comme si le commanditaire vient choisir un projet, il fà donc fallu pitcher notre projet pour le vendre`,
+                            La finalité du projet se concrétise en le proposant sur un stand de présentation en lien avec le projet. Chaque équipe présente comme si le commanditaire vient choisir un projet, il à donc fallu pitcher notre projet pour le vendre`,
             
             steps: [
                 { title: "01. Stratégie UX", desc: "Définition du commanditaire et de l'axe 'Bright Pattern'", img: "media/yubaba-com.png" },
@@ -146,7 +146,7 @@ const projectsData = {
             L'interface web a été pensée pour être mobile-first, facilitant l'accès à la billetterie.`,
             
             steps: [
-                { title: "01. Audit", desc: "Analyse de l'existant et du marché"},
+                { title: "01. Audit", desc: "Analyse de l'existant et du marché", img: "media/dolmen-dossier.png"},
                 { title: "02. Cibles", desc: "Définition des personas et du positionnement"},
                 { title: "03. Création de l'identité", desc: "Conception des supports visuels et messages"},
                 { title: "04. Production audiovisuelle", desc: "Tournage de vidéos dans les locaux"},
@@ -256,6 +256,11 @@ const projectsData = {
 
         gallery: [
             {
+                title: "L'équipe !",
+                subtitle: "Ronan, Vicent et moi-même",
+                image: "media/roold-equipe.jpeg"
+            },
+            {
                 title: "Catalogue Produits",
                 subtitle: "Mise en page • Affinity",
                 image: "media/roold-catalogue.png"
@@ -308,6 +313,43 @@ const projectsData = {
         next_project: {
             name: "Yubaba Bathhouse App",
             link: "projet.html?id=yubaba"
+        }
+    },
+
+    // PROJET 8 : Une idée pour mon Territoire
+    "territoire": {
+        meta: {
+            date: "DATE : 2025",
+            title: "Une Idée pour mon Territoire",
+            subtitle: "RÉSUMÉ",
+            intro_text: "Une journée de challenge et d'action pour ceux qui souhaitent agir pour leur territoire"
+        },
+        images: {
+            hero: "media/LTCTerritoire/territoire-1.jpg",
+            intro_small: "media/yubaba-mockup.png",
+            palette: [
+                "media/procreate-logo.png",
+                "media/affinity-logo.png",
+            ],
+            main_visual: "media/yubaba-logo.png"
+        },
+        content: {
+            description: `Lors de l'édition 2025 de l'événement Une idée pour mon territoire, j'ai participé à un challenge entrepreneurial collaboratif visant à répondre de manière innovante à une problématique posée par une agglomération : Comment décarboner les mobilités sur LTC. Au sein d'une équipe pluridisciplinaire et accompagnée par des coachs, j'ai contribué à façonner une solution concrète et réaliste pour le territoire. Cette expérience m'a permis de tester une démarche d'entrepreneuriat, de développer mon esprit d'initiative et de confronter mes idées aux attentes réelles des acteurs locaux lors d'un pitch final.`,
+            
+            steps: [
+                { title: "01. Audit", desc: "Observations et analyse de la situation actuelle de LTC", img: "media/audit.png" },
+                { title: "02. Brainstorming", desc: "Recherches d'idées pour répondre à la problématique", img: "media/brainstorming.jpeg" },
+                { title: "03. Idée retenue", desc: "Développer l'idée retenue", img: "media/idee.jpeg" },
+                { title: "04. Oral", desc: "Organiser l'oral et préparer le pitch", img: "media/oral.png" },
+            ],
+            
+            // Les compétences
+            soft_skills: ["Travail en équipe", "Gestion du temps et des tâches", "Organisation"],
+            hard_skills: ["Capacité de réponse à un enjeu", "Capacité à pitcher un projet"]
+        },
+        next_project: {
+            name: "DIORAMA",
+            link: "projets.html?id=diorama"
         }
     },
 }

@@ -23,7 +23,7 @@ body {
 }
 
 .sketch-layout {
-    max-width: 1400px; /* Passé de 1000px à 1400px */
+    max-width: 1400px;
     margin: 0 auto;
     padding: 4rem 5%; /* Un peu plus d'espace en haut */
     font-family: var(--font-body);
@@ -73,11 +73,11 @@ body {
 
 .intro-visual-main img {
     width: 100%;
-    height: 500px; /* Un peu plus haut vu qu'on est plus large */
+    height: 500px;
     object-fit: cover;
-    border: none; /* SUPPRESSION BORDURE */
-    border-radius: 15px; /* On garde juste un arrondi doux */
-    box-shadow: 10px 10px 20px rgba(0,0,0,0.1); /* Ombre douce au lieu du trait */
+    border: none;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
 }
 
 /* Petite image Intro Droite */

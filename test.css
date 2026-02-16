@@ -181,14 +181,14 @@ li {
 
 /* 7. Crayon (Nouveau - Droite Vertical) */
 .item-crayon {
-    top: 45%;
-    right: 2%;
-    transform: rotate(45deg);
+    top: 15%;
+    right: 15%;
+    transform: rotate(20deg);
     z-index: 3;
 }
 
 .item-crayon img {
-    width: 80px;
+    width: 120px;
 }
 
 /* 8. Polaroid (Droite Bas) */
