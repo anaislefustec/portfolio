@@ -100,7 +100,8 @@ const projectsData = {
         },
         content: {
             description: `HAZE se positionne comme l'architecte visuel de la nouvelle scène rap. Plus qu'une agence, c'est une vision qui fusionne l'esthétique urbaine brute et l'atmosphère vaporeuse associée à la culture CBD.
-                            L'identité graphique joue audacieusement sur les codes subversifs et le double sens : le nom 'Haze', référence directe à l'argot désignant le cannabis, se matérialise dans un logo fort en forme d'œil. Ses cils, stylisés, reprennent subtilement la forme caractéristique des cinq feuilles de la plante, symbolisant un regard lucide mais détendu sur le monde.`,
+                            L'identité graphique joue audacieusement sur les codes subversifs et le double sens : le nom 'Haze', référence directe à l'argot désignant le cannabis, se matérialise dans un logo fort en forme d'œil.
+                            Ses cils, stylisés, reprennent subtilement la forme caractéristique des cinq feuilles de la plante, symbolisant un regard lucide mais détendu sur le monde.`,
             
             steps: [
                 { title: "01. Recherche", desc: "Recherches de concept d'agence", img: "media/haze-exp.png" },
@@ -142,8 +143,7 @@ const projectsData = {
             main_visual: "media/dolmen-logo.png"
         },
         content: {
-            description: `Face à des géants de l'affiche industrielle, HEOL se distingue par une mission claire : redonner ses lettres de noblesse à l'art mural tout en respectant l'humain et la planète. Ce projet global vise à créer une passerelle transparente entre des artistes indépendants et des passionnés de décoration. L'identité visuelle a été conçue pour refléter les trois piliers de la marque : l'écologie (impression sur papier cartonné recyclé), l'éthique (production Made in France) et l'insertion sociale. Au-delà du simple graphisme, j'ai élaboré, avec l'aide de mes camarades, une stratégie webmarketing complète (SEO, affiliation, réseaux sociaux) pour toucher une cible sensible au "Beau" et au "Juste", garantissant enfin une rémunération équitable aux créateurs. HEOL, c'est le design qui a du sens.
-            L'interface web a été pensée pour être mobile-first, facilitant l'accès à la billetterie.`,
+            description: `Dans le cadre de ce projet pour Dolmen Protect, fabricant français centenaire de vêtements professionnels, l'objectif a été d'élaborer une stratégie de communication digitale complète visant à moderniser l’image de marque et à conquérir une cible plus jeune. Le travail a consisté à concevoir une charte éditoriale cohérente ainsi qu’un plan de stratégie social média structuré, permettant d’homogénéiser la présence de l’entreprise sur les réseaux sociaux.`,
             
             steps: [
                 { title: "01. Audit", desc: "Analyse de l'existant et du marché", img: "media/dolmen-dossier.png"},
