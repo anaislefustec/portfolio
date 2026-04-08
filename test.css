@@ -7,9 +7,18 @@
     --blue: #4F6DFF;
     --c1: #b8d8f0; /* bleu clair */
     --c2: #f7b8c8;
-    --font-display: "Londrina Solid", sans-serif;
+    --font-display: "Neulis Alt", sans-serif;
     --font-script: "Beth Ellen", cursive;
     --font-body: "Space Grotesk", Arial, sans-serif;
+}
+
+@font-face {
+    font-family: 'Neulis Alt';
+    src: url('media/Font\ Neulis/Neulis-Black.woff2') format('woff2'),
+        url('media/Font\ Neulis/Neulis-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
 }
 
 * {
@@ -45,7 +54,7 @@ li {
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 2px
+    border-bottom: 2px;
 }
 
 .logo {
@@ -71,12 +80,6 @@ li {
 
 }
 
-
-/*.hero-img {
-    height: 820px;
-    width: 1720px;
-}*/
-
 /* --- HERO COLLAGE --- */
 
 .hero-collage {
@@ -85,7 +88,6 @@ li {
     min-height: 90vh;
     /* Prend tout l'écran */
     background-color: var(--bg-cream);
-    /* VOTRE COULEUR DE FOND */
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -96,10 +98,8 @@ li {
 .hero-static-content {
     position: relative;
     z-index: 1;
-    /* Derrière les images déplacées */
     text-align: center;
     pointer-events: none;
-    /* Important : permet de cliquer à travers le texte si besoin */
     user-select: none;
 }
 
