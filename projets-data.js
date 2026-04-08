@@ -143,7 +143,11 @@ const projectsData = {
             main_visual: "media/dolmen-logo.png"
         },
         content: {
-            description: `Dans le cadre de ce projet pour Dolmen Protect, fabricant français centenaire de vêtements professionnels, l'objectif a été d'élaborer une stratégie de communication digitale complète visant à moderniser l’image de marque et à conquérir une cible plus jeune. Le travail a consisté à concevoir une charte éditoriale cohérente ainsi qu’un plan de stratégie social média structuré, permettant d’homogénéiser la présence de l’entreprise sur les réseaux sociaux.`,
+            description: `Dans le cadre de notre deuxième année de BUT MMI à l'IUT de Lannion, nous avons collaboré en équipe de quatre avec Jean-François Marco, Directeur Général de Dolmen, fabricant français centenaire de vêtements professionnels.
+
+L'objectif central de ce projet a été de moderniser l’image de marque de l'entreprise pour conquérir une cible plus jeune. En mobilisant nos compétences pluridisciplinaires — du marketing à la création graphique — nous avons élaboré une stratégie social média complète, incluant une charte éditoriale cohérente pour homogénéiser la communication numérique.
+
+De plus nous avons réalisé une vidéo promotionnelle de 3/5 min sur la qualité du savoir-faire de l’entreprise en y intégrant un storytelling fort sur l’histoire de la marque ainsi qu’un site web vitrine qui mettrait en avant les produits.`,
             
             steps: [
                 { title: "01. Audit", desc: "Analyse de l'existant et du marché", img: "media/dolmen-dossier.png"},
@@ -326,15 +330,17 @@ const projectsData = {
         },
         images: {
             hero: "media/LTCTerritoire/territoire-1.jpg",
-            intro_small: "media/yubaba-mockup.png",
+            intro_small: "media/LTCTerritoire/territoire-2.jpg",
             palette: [
-                "media/procreate-logo.png",
-                "media/affinity-logo.png",
+                "media/conva.png",
+                "media/googledoc.png",
             ],
-            main_visual: "media/yubaba-logo.png"
+            main_visual: "media/LTCTerritoire/territoire-3.jpg"
         },
         content: {
-            description: `Lors de l'édition 2025 de l'événement Une idée pour mon territoire, j'ai participé à un challenge entrepreneurial collaboratif visant à répondre de manière innovante à une problématique posée par une agglomération : Comment décarboner les mobilités sur LTC. Au sein d'une équipe pluridisciplinaire et accompagnée par des coachs, j'ai contribué à façonner une solution concrète et réaliste pour le territoire. Cette expérience m'a permis de tester une démarche d'entrepreneuriat, de développer mon esprit d'initiative et de confronter mes idées aux attentes réelles des acteurs locaux lors d'un pitch final.`,
+            description: `Lors de l'édition 2025 de l'événement Une idée pour mon territoire, j'ai participé à un challenge entrepreneurial collaboratif visant à répondre de manière innovante à une problématique posée par une agglomération : Comment décarboner les mobilités sur LTC. Au sein d'une équipe pluridisciplinaire et accompagnée par des coachs, j'ai contribué à façonner une solution concrète et réaliste pour le territoire à travers une cible qui nous a été assignée. 
+            Après avoir réalisé un audit de la situation actuelle de LTC, nous en avons tiré une solution : mettre en place plus de navettes dans les zones les plus rurales, pour inciter les conducteurs à laisser leur voiture pour prendre ces navettes. Cette expérience m'a permis de tester une démarche d'entrepreneuriat, de développer mon esprit d'initiative et de confronter mes idées aux attentes réelles des acteurs locaux lors d'un pitch final.`,
+
             
             steps: [
                 { title: "01. Audit", desc: "Observations et analyse de la situation actuelle de LTC", img: "media/audit.png" },
