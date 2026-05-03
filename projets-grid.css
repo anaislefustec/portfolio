@@ -1,5 +1,5 @@
 .sketch-layout.grid-mode {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 40px 20px;
     color: #333;
@@ -11,51 +11,189 @@
     margin-bottom: 60px;
 }
 .sketch-title { font-size: 4rem; margin-bottom: 20px; font-weight: 700; }
-.sketch-intro-text { font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto; }
+.sketch-intro-text { font-size: 1.1rem; color: #666; max-width: 900px; margin: 0 auto; }
 
-/* --- La Grille (GRID) --- */
+/* --- La Grille → Liste verticale --- */
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px; 
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     margin-bottom: 80px;
 }
 
 /* --- Chaque Élément (Item) --- */
 .grid-item {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
     transition: transform 0.3s ease;
-
 }
 
 .grid-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
+}
+
+/* Séparateur entre items */
+.grid-item + .grid-item {
+    padding-top: 50px;
+    border-top: 1px solid #ddd;
+}
+
+
+/* Image unique directe sur .grid-item */
+.grid-item > .grid-image-wrapper {
+    flex: 0 0 340px;
+    width: 340px;
+}
+
+/* Conteneur pour plusieurs images côte à côte */
+.grid-images-group {
+    flex: 0 0 340px;
+    width: 340px;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: stretch;
+}
+
+/* Dans un groupe, chaque wrapper partage l'espace équitablement */
+.grid-images-group .grid-image-wrapper {
+    flex: 1 1 0 !important;
+    width: 0 !important;
+    min-width: 0;
 }
 
 .grid-image-wrapper {
-    width: 100%;
     border-radius: 8px;
     overflow: hidden;
     background-color: #f0f0f0;
-    margin-bottom: 15px;
     border: 1px solid rgb(79, 76, 76);
-
-
+    cursor: zoom-in;
 }
 
 .grid-image-wrapper img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     object-fit: cover;
     transition: opacity 0.3s ease;
 }
 
-.grid-item:hover .grid-image-wrapper img { opacity: 0.9; }
+.grid-item:hover .grid-image-wrapper img { opacity: 0.88; }
 
-.grid-infos { padding: 0 5px; }
-.grid-infos h3 { font-size: 1.1rem; margin: 0 0 5px 0; font-weight: 600; color: #222; }
-.grid-desc { font-size: 0.9rem; color: #777; font-style: italic; }
+/* --- Texte à droite --- */
+.grid-infos {
+    flex: 1;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grid-infos h3 {
+    font-size: 1.4rem;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    color: #111;
+}
+
+.grid-desc {
+    font-size: 1rem;
+    color: #666;
+    font-style: italic;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Lien englobant (scénario B – liste des projets) */
+.grid-item a {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.grid-item a .grid-image-wrapper {
+    cursor: pointer;
+}
+
+/* --- LIGHTBOX --- */
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+    padding: 30px;
+}
+
+.lightbox-overlay.active {
+    display: flex;
+}
+
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 88vh;
+    border-radius: 6px;
+    object-fit: contain;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    cursor: default;
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 20px;
+    right: 28px;
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 300;
+    cursor: pointer;
+    line-height: 1;
+    background: none;
+    border: none;
+    padding: 0;
+    z-index: 10000;
+    transition: opacity 0.2s;
+}
+.lightbox-close:hover { opacity: 0.6; }
+
+/* --- Responsive --- */
+@media (max-width: 700px) {
+    .grid-item,
+    .grid-item a {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .grid-image-wrapper,
+    .grid-images-group {
+        flex: none !important;
+        width: 100% !important;
+    }
+}
 
 .hand-line { height: 1px; background: #ddd; width: 100%; margin: 0 auto; }
+
+.grid-link {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.grid-link:hover {
+    color: #000;
+    border-color: #000;
+}

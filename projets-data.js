@@ -3,7 +3,7 @@ const projectsData = {
     "yubaba": {
         meta: {
             date: "DATE : 2025",
-            title: "Yubaba's Bathhouse App",
+            title: "Yubaba's Bathhouse",
             subtitle: "RÉSUMÉ",
             intro_text: "Conception et création d'une application pour Yubaba en une semaine"
         },
@@ -20,7 +20,7 @@ const projectsData = {
             description: `L’objectif de cette semaine de production est de réaliser un calendrier de l’avent sur le thème du film d’animation Le voyage de Chihiro. Pour ce projet, nous avions une ligne conductrice principale : mettre en valeur les bright patterns à contrario des dark patterns.
                             Pour arriver à nos fins, du fait que ce projet est fictif, nous devions choisir un commanditaire, ses cibles mais aussi l’axe qu’il choisit de donner à son calendrier. 
                             Dans ce projet la seule contrainte était l’imagination du créateur, nous avions la liberté de choisir l’univers graphique, le ton à utiliser et le contenu des cases elles mêmes. 
-                            La finalité du projet se concrétise en le proposant sur un stand de présentation en lien avec le projet. Chaque équipe présente comme si le commanditaire vient choisir un projet, il à donc fallu pitcher notre projet pour le vendre`,
+                            La finalité du projet se concrétise en le proposant sur un stand de présentation en lien avec le projet. Chaque équipe présente comme si le commanditaire vient choisir un projet, il a donc fallu pitcher notre projet pour le vendre`,
             
             steps: [
                 { title: "01. Stratégie UX", desc: "Définition du commanditaire et de l'axe 'Bright Pattern'", img: "media/yubaba-com.png" },
@@ -67,7 +67,7 @@ const projectsData = {
                 { title: "01. Recherche", desc: "Brainstorming, recherches d'idées, benchmark concurrentiel", img: "media/soleil dégradé.png" },
                 { title: "02. Concept", desc: "Concept des valeurs du ton et de la mission de marque ainsi que sa stratégie digitale", img: "media/heol mockup.png" },
                 { title: "03. Identité", desc: "Création de l'identité visuelle : logos, déclinaisons, charte graphique", img: "media/logo - mockups.png" },
-                { title: "04. Maquettage", desc: "Création de maquettes foncitonnelles sur Figma", img: "media/heol-mac.jpg" }
+                { title: "04. Maquettage", desc: "Création de maquettes fonctionnelles sur Figma", img: "media/heol-mac.jpg" }
             ],
             
             // Les compétences
@@ -147,7 +147,7 @@ const projectsData = {
 
 L'objectif central de ce projet a été de moderniser l’image de marque de l'entreprise pour conquérir une cible plus jeune. En mobilisant nos compétences pluridisciplinaires — du marketing à la création graphique — nous avons élaboré une stratégie social média complète, incluant une charte éditoriale cohérente pour homogénéiser la communication numérique.
 
-De plus nous avons réalisé une vidéo promotionnelle de 3/5 min sur la qualité du savoir-faire de l’entreprise en y intégrant un storytelling fort sur l’histoire de la marque ainsi qu’un site web vitrine qui mettrait en avant les produits.`,
+De plus nous avons réalisé une vidéo promotionnelle de 3 à 5 min sur la qualité du savoir-faire de l’entreprise en y intégrant un storytelling fort sur l’histoire de la marque ainsi qu’un site web vitrine qui mettrait en avant les produits.`,
             
             steps: [
                 { title: "01. Audit", desc: "Analyse de l'existant et du marché", img: "media/dolmen-dossier.png"},
@@ -161,7 +161,7 @@ De plus nous avons réalisé une vidéo promotionnelle de 3/5 min sur la qualit�
             
             // Les compétences
             soft_skills: ["Gestion du temps", "Organisation", "Professionnalisme"],
-            hard_skills: ["Maîtrise du matériel audiovisuel", "Compétences graphiques", "Connaissances du langage FRONT END"]
+            hard_skills: ["Maîtrise du matériel audiovisuel", "Compétences graphiques", "Connaissances des langages Front-End"]
         },
 
         next_project: {
@@ -195,7 +195,7 @@ De plus nous avons réalisé une vidéo promotionnelle de 3/5 min sur la qualit�
             ],
             
             // Les compétences
-            soft_skills: ["Autonomie", "créativité"],
+            soft_skills: ["Autonomie", "Créativité"],
             hard_skills: ["Maîtrise de Blender"]
         },
 
@@ -247,72 +247,51 @@ De plus nous avons réalisé une vidéo promotionnelle de 3/5 min sur la qualit�
             date: "DATE : 2025",
             title: "Stage chez Roold",
             subtitle: "RÉSUMÉ",
-            intro_text: "Différents contenus multimédia que j'ai pu réaliser pendant mon stage de 3 mois en tant qu'assistante chargée de communication"
-        },
-        images: {
-            hero: "media/roold-affiche1.jpg",
-            intro_small: "media/roold-catalogue.jpg",
-            palette: [
-                "media/resolve.png",
-                "media/affinity-logo.png",
-            ],
+            intro_text: "Différents contenus multimédia que j'ai pu réaliser pendant mon stage de 3 mois en tant qu'assistante chargée de communication. Mon rôle était de gérer les réseaux sociaux grâce à un planning éditorial et à la création de visuels mais aussi d'alimenter le blog du site web avec différents articles et enfin de créer du contenu multimédia (affiches, flyers, catalogues...) pour la communication externe."
         },
 
         gallery: [
             {
                 title: "L'équipe !",
-                subtitle: "Ronan, Vicent et moi-même",
+                subtitle: "Ronan, Vincent et moi-même",
                 image: "media/roold-equipe.jpeg"
             },
             {
                 title: "Catalogue Produits",
-                subtitle: "Mise en page • Affinity",
+                subtitle: "J'ai réalisé la mise en page d'un catalogue avec tous les produits à destination des clients et des professionnels. On y retrouve toutes les informations sur la personnalisation du vélo ainsi que les accessoires qu'il est possible d'acheter avec. Le tout dans les couleurs de la charte graphique. • Affinity",
                 image: "media/roold-catalogue.png"
             },
             {
                 title: "Notice pour les clients",
-                subtitle: "Mise en page • Affinity",
+                subtitle: "J'ai mis en page une notice à destination des clients qui achètent un vélo Roold. Cette notice évoque l'histoire du vélo et tout le processus de réemploi ainsi que la manière dont il faut l'entretenir. • Affinity",
                 image: "media/roold-notice.png"
             },
             {
                 title: "Bâche pour le stand",
-                subtitle: "Mise en page • Affinity",
+                subtitle: "J'ai créé un visuel pour une bâche de stand extérieur utilisé lors des salons. À gauche se trouve un modèle de vélo Roold, au centre le logo de la marque et enfin, à droite, une infographie sur le processus de refabrication des vélos. • Affinity",
                 image: "media/roold-bache.jpg"
             },
             {
-                title: "Communiqué de Presse",
-                subtitle: "Mise en page • Affinity",
+                title: "Communiqué de presse",
+                subtitle: "J'ai rédigé un communiqué de presse sur l'histoire de la marque et les valeurs qu'elle porte et transmet. Il comprend également les gammes de vélos disponibles et les contacts • Affinity",
                 image: "media/roold-communiqué.jpg"
             },
             {
                 title: "Affiche Promotionnelle",
-                subtitle: "Publicité • Affinity",
+                subtitle: "J'ai produit une affiche à destination des recycleries pour informer les usagers que les vélos qu'ils y déposent peuvent être récupérés et refabriqués. J'ai également dessiné les petits vélos. • Affinity",
                 image: "media/roold-affiche1.jpg"
             },
             {
                 title: "Post sur les réseaux",
-                subtitle: "Couverture du post pour Mai à Vélo • Affinity",
-                image: "media/roold-mai.jpg",
+                subtitle: "Un exemple de couverture de posts Instagram • Affinity",
+                images: ["media/roold-mai.jpg", "media/roold-mai1.jpg"]
             },
             {
                 title: "Moodboard",
-                subtitle: "Moodboard à destination d'une entreprise pour la création d'un nouveau stand • Affinity",
+                subtitle: "J'ai réalisé un moodboard à destination d'une entreprise pour la création d'un nouveau stand pour les salons. J'y ai intégré différentes matières présentes sur le vélo (métal, rouille, ..) mais aussi des photos, les couleurs de la charte et le logo. • Affinity",
                 image: "media/roold-moodboard.jpg",
             }
         ],
-
-        content: {
-            description: `Dans le cadre de l'apprentissage du logiciel Blender, nous avions à modéliser l'univers que nous désirions dans la limite du format diorama. J'ai choisi de me lancer dans une ambiance sombre et surnaturelle, accentuée par le brouillard et les lumières violettes, dans laquelle une poule, appartenant à la taverne et qui s'est échappée de son poulailler, se fait kidnapper par un alien dans une soucoupe volante.`,
-            
-            steps: [
-                { title: "01. Recherche d'inspiration", desc: "Veille pour trouver une idée d'univers", img: "media/pinterest-dio.png" },
-                { title: "02. Modélisation", desc: "Création du projet", img: "media/blender-dio2.png" },
-            ],
-            
-            // Les compétences
-            soft_skills: ["Autonomie", "créativité"],
-            hard_skills: ["Maîtrise de Blender"]
-        },
 
         next_project: {
             name: "Yubaba Bathhouse App",
@@ -338,7 +317,7 @@ De plus nous avons réalisé une vidéo promotionnelle de 3/5 min sur la qualit�
             main_visual: "media/LTCTerritoire/territoire-3.jpg"
         },
         content: {
-            description: `Lors de l'édition 2025 de l'événement Une idée pour mon territoire, j'ai participé à un challenge entrepreneurial collaboratif visant à répondre de manière innovante à une problématique posée par une agglomération : Comment décarboner les mobilités sur LTC. Au sein d'une équipe pluridisciplinaire et accompagnée par des coachs, j'ai contribué à façonner une solution concrète et réaliste pour le territoire à travers une cible qui nous a été assignée. 
+            description: `Lors de l'édition 2025 de l'événement Une idée pour mon territoire, j'ai participé à un challenge entrepreneurial collaboratif visant à répondre de manière innovante à une problématique posée par une agglomération : Comment décarboner les mobilités sur le territoire de LTC. Au sein d'une équipe pluridisciplinaire et accompagnée par des coachs, j'ai contribué à façonner une solution concrète et réaliste pour le territoire à travers une cible qui nous a été assignée. 
             Après avoir réalisé un audit de la situation actuelle de LTC, nous en avons tiré une solution : mettre en place plus de navettes dans les zones les plus rurales, pour inciter les conducteurs à laisser leur voiture pour prendre ces navettes. Cette expérience m'a permis de tester une démarche d'entrepreneuriat, de développer mon esprit d'initiative et de confronter mes idées aux attentes réelles des acteurs locaux lors d'un pitch final.`,
 
             
@@ -356,6 +335,56 @@ De plus nous avons réalisé une vidéo promotionnelle de 3/5 min sur la qualit�
         next_project: {
             name: "DIORAMA",
             link: "projets.html?id=diorama"
+        }
+    },
+
+       // PROJET 9 : office de tourisme
+
+    "office de tourisme": {
+        meta: {
+            date: "DATE : 2025-2026",
+            title: "Alternance à l'Office de Tourisme Côte de Granit Rose",
+            subtitle: "RÉSUMÉ",
+            intro_text: "Différents contenus multimédia que j'ai pu réaliser durant mon alternance d'un an en tant qu'assistante chargée de communication. Mon rôle était la gestion et la création d'articles pour le site web ainsi que la création de contenus multimédia tels que des affiches, des couvertures et pages de magazines et divers documents et enfin la gestion des réseaux sociaux."
+        },
+
+        gallery: [
+            {
+                title: "Page dans le magazine 'Bretagne Mag'",
+                subtitle: "J'ai réalisé la mise en page d'une pleine page d'un magazine centré sur Trébeurden. J'ai choisi une photo représentative du lieu et j'ai ajouté le logo de l'office, la carte de la Bretagne pour situer et un texte avec un appel à action en direction des lecteurs. • Illustrator",
+                image: "media/Office/bretagnemag.jpg"
+            },
+            {
+                title: "Page dans le magazine 'Seniors Mag'",
+                subtitle: "J'ai rédigé le texte et mis en forme le tout en respectant des contraintes imposées (taille de la police, nombre de colonnes et d'images). Pour cette édition, le texte aborde le patrimoine culturel et gastronomique de la région en plusieurs paragraphes et se termine par un appel à l'action encadré en rose. On y retrouve plusieurs éléments de la charte graphique : la couleur et le motif de la vague au niveau des photos. • InDesign",
+                image: "media/Office/seniormag.jpg"
+            },
+            {
+                title: "Page de publicité de la Côte de Granit Rose",
+                subtitle: "Pour une nouvelle édition, j'ai reproduit une page existante de A à Z pour y modifier la photo. • Affinity",
+                image: "media/Office/pubcdgr.jpg"
+            },
+            {
+                title: "Pages de couverture pour des guides touristiques",
+                subtitle: "J'ai élaboré ces pages de couvertures de A à Z en prenant l'inspiration d'une couverture réalisée par un prestataire, le tout pour conserver une cohérence visuelle entre les guides. J'ai respecté les polices et j'ai créé les ficelles pour chaque couverture. • Illustrator",
+                images: ["media/Office/gites.jpg", "media/Office/hotels.jpg", "media/Office/locatifs.jpg", "media/Office/pleinair.jpg"]
+            },
+            {
+                title: "Pages de couvertures pour des guides touristiques",
+                subtitle: "En conservant la même cohérence visuelle, j'ai également produit ces couvertures pour des guides de lieux accessibles à tous. • InDesign",
+                images: ["media/Office/couvlieux.jpg", "media/Office/couvlieux2.jpg"]
+            },
+            {
+                title: "Affiche Promotionnelle",
+                subtitle: "J'ai produit une affiche à destination des saisonniers des différents offices. J'ai utilisé le tutoiement car c'est une cible jeune et ils sont représentés autour d'une table sur la photo utilisée. On y retrouve des éléments de la charte graphique : le rose et les vagues au niveau de la photo. Pour l'appel à l'action, j'ai laissé un espace pour un QR Code, permettant aux saisonniers de facilement scanner avec leur téléphone. • Affinity",
+                image: "media/Office/flyer.jpg"
+            },
+
+        ],
+
+        next_project: {
+            name: "Yubaba Bathhouse App",
+            link: "projet.html?id=yubaba"
         }
     },
 }

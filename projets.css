@@ -3,7 +3,10 @@
     --orange: #FF5E1A;
     --yellow: #FFC107;
     --black: #1A1A1A;
-    --font-display: "Londrina Solid", sans-serif;
+    --blue: #4F6DFF;
+    --c1: #b8d8f0; /* bleu clair */
+    --c2: #f7b8c8;
+    --font-display: "Neulis Alt", sans-serif;
     --font-script: "Beth Ellen", cursive;
     --font-body: "Space Grotesk", Arial, sans-serif;
 }
@@ -41,18 +44,15 @@ body {
     font-size: 1.2rem;
     color: var(--black);
     display: block;
-    margin-bottom: -10px; /* Colle un peu au titre */
 }
 
 .sketch-title {
     font-family: var(--font-display); /* Votre police titre */
-    font-size: 6rem; /* Très gros comme sur le dessin */
+    font-size: 5rem; /* Très gros comme sur le dessin */
     line-height: 1;
     margin: 0;
     text-transform: uppercase;
     color: var(--black);
-    /* Petit effet "marker" */
-    text-shadow: 3px 3px 0px var(--orange);
 }
 
 .sketch-subtitle {
@@ -188,12 +188,27 @@ body {
 }
 
 .step-card p {
+    z-index: 1;
     font-family: var(--font-body);
     font-size: 1rem;
     margin-top: 10px;
     opacity: 0;
     transform: translateY(20px);
     display: none;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.95), 0 2px 8px rgba(0,0,0,0.8);
+}
+
+.step-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.80) 0%,
+        rgba(0,0,0,0.40) 38%,
+        transparent 65%
+    );
+    pointer-events: none;
 }
 
 /* QUAND LA CARTE EST OUVERTE (HOVER) */
