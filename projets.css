@@ -262,20 +262,118 @@ body {
 
 /* RESPONSIVE MOBILE */
 @media (max-width: 768px) {
-    .steps-container {
-        flex-direction: column; /* Sur mobile, on empile verticalement */
-        height: auto;
+
+    /* Layout général */
+    .sketch-layout {
+        padding: 2rem 5%;
     }
-    
-    .step-card {
-        height: 100px; /* Cartes fines fermées */
+
+    /* Header */
+    .sketch-title {
+        font-size: 2.8rem;
+    }
+
+    .sketch-subtitle {
+        font-size: 1.4rem;
+    }
+
+    /* Intro : 2 colonnes → 1 colonne */
+    .sketch-grid-intro {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 3rem;
+    }
+
+    .intro-visual-main img {
+        height: 260px;
+    }
+
+    .intro-visual-small img {
+        height: 200px;
+    }
+
+    /* LE PROJET : 2 colonnes → 1 colonne */
+    .sketch-grid-projet {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-left: 0;
+        margin-bottom: 3rem;
+    }
+
+    .projet-visual-col img {
         width: 100%;
-        flex: none; /* On désactive le flex grow horizontal */
+        height: 260px;
+        transform: none;
+        margin-left: 0;
+        border-radius: 12px;
     }
-    
-    .step-card:hover {
-        height: 250px; /* S'ouvre en hauteur */
+
+    /* Étapes : cartes empilées verticalement */
+    .steps-container {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .step-card {
+        height: 80px;
+        width: 100%;
         flex: none;
+        border-radius: 16px;
+    }
+
+    .step-card:hover {
+        height: 220px;
+        flex: none;
+    }
+
+    .step-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .step-card:hover h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Skills : 2 colonnes → 1 colonne */
+    .sketch-skills {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 3rem;
+    }
+
+    /* Mon rôle */
+    .sketch-paragraphe {
+        margin-bottom: 2.5rem;
+    }
+
+    .paragraphe-text {
+        max-width: 100%;
+        font-size: 0.97rem;
+    }
+
+    /* Documents */
+    .documents-list {
+        flex-direction: column;
+    }
+
+    .doc-link {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Résultats */
+    .res-item.horizontal,
+    .res-item.vertical,
+    .res-item.square {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+
+    /* Palette outils */
+    .project-palette {
+        flex-wrap: wrap;
     }
 }
 
