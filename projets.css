@@ -33,6 +33,24 @@ body {
     color: var(--black);
 }
 
+.back-btn {
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--black);
+    text-decoration: none;
+    border-bottom: 1px solid var(--black);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.back-btn:hover {
+    color: var(--orange);
+    border-color: var(--orange);
+}
+
 /* 1. HEADER */
 .sketch-header {
     margin-bottom: 3rem;
@@ -47,7 +65,7 @@ body {
 }
 
 .sketch-title {
-    font-family: var(--font-display); /* Votre police titre */
+    font-family: var(--font-display);
     font-size: 5rem; /* Très gros comme sur le dessin */
     line-height: 1;
     margin: 0;
@@ -328,47 +346,60 @@ body {
     height: 150px;
 }
 
-/* 7. FOOTER NAV */
-.sketch-footer-nav {
-    text-align: right;
+
+
+/* --- Mon rôle --- */
+.sketch-paragraphe {
     margin-bottom: 4rem;
-    padding-top: 2rem;
 }
 
-.sketch-footer-nav a {
-    font-family: var(--font-display); /* Style manuscrit */
-    font-size: 3rem;
+.paragraphe-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+    max-width: 800px;
+    border-left: 3px solid var(--orange);
+    padding-left: 20px;
+    margin-top: 1rem;
+}
+
+/* --- Documents PDF --- */
+.sketch-documents {
+    margin-bottom: 5rem;
+}
+
+.sketch-documents.hidden {
+    display: none;
+}
+
+.documents-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.doc-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border: 2px solid var(--black);
+    border-radius: 8px;
     text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
     color: var(--black);
+    transition: background 0.2s, color 0.2s;
 }
 
-.sketch-footer-nav a:hover {
-    color: var(--orange);
+.doc-link::before {
+    content: "↓";
+    font-size: 1.1rem;
 }
 
-/* RESPONSIVE MOBILE */
-@media (max-width: 768px) {
-    .sketch-title { font-size: 5rem; }
-    
-    .sketch-grid-intro, 
-    .sketch-grid-projet, 
-    .steps-container, 
-    .sketch-skills {
-        grid-template-columns: 1fr; /* Tout en une colonne */
-        gap: 60px;
-    }
-
-    /* Pour la grille résultat sur mobile */
-    .res-item.horizontal, 
-    .res-item.vertical, 
-    .res-item.square {
-        width: 100%; /* Pleine largeur */
-        height: auto;
-        aspect-ratio: 16/9;
-    }
-
-    .projet-visual-col img {
-        margin-left: 50px;
-    }
+.doc-link:hover {
+    background: var(--black);
+    color: #fff;
 }
-

@@ -1,4 +1,5 @@
 const projectsData = {
+
     // PROJET 0 : Yubaba's Bathhouse App
     "yubaba": {
         meta: {
@@ -27,11 +28,12 @@ const projectsData = {
                 { title: "02. Création de l'univers", desc: "Direction artistique basée sur le film : illustrations, pictogrammes...", img: "media/yubaba-charte.png" },
                 { title: "03. Maquettage", desc: "Conception de wireframes et maquettes de l'interface utilisateur", img: "media/yubaba-picto.png" },
                 { title: "04. Prototypage", desc: "Développement de l'application en ligne", img: "media/yubaba-mockup2.png" },
-                { title: "05. Impression et stand", desc: "Impression des affiches, du kakémono et mise en place du stand", img: "media/yubaba-print.jpg" }
+                { title: "05. Impressions", desc: "Impression des affiches, du kakémono et mise en place du stand", img: "media/yubaba-print.jpg" }
 
             ],
             
             // Les compétences
+            role: "Direction artistique, illustration des pictogrammes et de l'identité visuelle, aide à la conception des maquettes, mise en page des supports print pour le stand.",
             soft_skills: ["Travail en équipe", "Gestion du temps et des tâches", "Créativité"],
             hard_skills: ["Maîtrise du logiciel Affinity", "Maîtrise de Procreate", "Capacité à pitcher un projet"]
         },
@@ -71,6 +73,7 @@ const projectsData = {
             ],
             
             // Les compétences
+            role: "Co-conception de l'identité visuelle et de la charte graphique, création des maquettes Figma, contribution à la stratégie webmarketing et réseaux sociaux.",
             soft_skills: ["Gestion de projet", "Créativité", "Communication"],
             hard_skills: ["Affinity", "Figma / Maquettage", "Procreate"]
         },
@@ -110,6 +113,7 @@ const projectsData = {
             ],
             
             // Les compétences
+            role: "Création intégrale de l'identité visuelle en autonomie : nommage, logo, charte graphique et déclinaisons — le tout en 3h.",
             soft_skills: ["Gestion du temps", "Adaptabilité", "Originalité"],
             hard_skills: ["Affinity", "Figma"]
         },
@@ -150,16 +154,17 @@ L'objectif central de ce projet a été de moderniser l’image de marque de l'e
 De plus nous avons réalisé une vidéo promotionnelle de 3 à 5 min sur la qualité du savoir-faire de l’entreprise en y intégrant un storytelling fort sur l’histoire de la marque ainsi qu’un site web vitrine qui mettrait en avant les produits.`,
             
             steps: [
-                { title: "01. Audit", desc: "Analyse de l'existant et du marché", img: "media/dolmen-dossier.png"},
-                { title: "02. Cibles", desc: "Définition des personas et du positionnement"},
-                { title: "03. Création de l'identité", desc: "Conception des supports visuels et messages"},
-                { title: "04. Production audiovisuelle", desc: "Tournage de vidéos dans les locaux"},
-                { title: "05. Maquettage", desc: "Création d'un site web vitrine"},
+                { title: "01. Audit", desc: "Analyse de l'existant et du marché", img: "media/audit.png"},
+                { title: "02. Cibles", desc: "Définition des personas et du positionnement", img: "media/brainstorming.jpeg"},
+                { title: "03. Identité", desc: "Conception des supports visuels et messages", img: "media/créa.jpg"},
+                { title: "04. Tournage", desc: "Tournage de vidéos dans les locaux", img: "media/camera.jpeg"},
+                { title: "05. Maquettage", desc: "Création d'un site web vitrine", img: "media/dolmen-vitrine.jpg"},
 
 
             ],
             
             // Les compétences
+            role: "Participation à l'audit, conception graphique des supports de communication, élaboration de la stratégie de communication digitale, contribution au tournage vidéo et création des maquettes du site vitrine.",
             soft_skills: ["Gestion du temps", "Organisation", "Professionnalisme"],
             hard_skills: ["Maîtrise du matériel audiovisuel", "Compétences graphiques", "Connaissances des langages Front-End"]
         },
@@ -195,6 +200,7 @@ De plus nous avons réalisé une vidéo promotionnelle de 3 à 5 min sur la qual
             ],
             
             // Les compétences
+            role: "Projet réalisé en totale autonomie : choix de l'univers, modélisation 3D intégrale, gestion des lumières, du brouillard et du rendu final sous Blender.",
             soft_skills: ["Autonomie", "Créativité"],
             hard_skills: ["Maîtrise de Blender"]
         },
@@ -230,6 +236,7 @@ De plus nous avons réalisé une vidéo promotionnelle de 3 à 5 min sur la qual
             ],
             
             // Les compétences
+            role: "À compléter.",
             soft_skills: ["Autonomie", "créativité"],
             hard_skills: ["Maîtrise de Blender"]
         },
@@ -329,6 +336,7 @@ De plus nous avons réalisé une vidéo promotionnelle de 3 à 5 min sur la qual
             ],
             
             // Les compétences
+            role: "Participation active à toutes les phases du challenge : audit, brainstorming, développement de la solution, création des supports de présentation et pitch final devant le jury.",
             soft_skills: ["Travail en équipe", "Gestion du temps et des tâches", "Organisation"],
             hard_skills: ["Capacité de réponse à un enjeu", "Capacité à pitcher un projet"]
         },

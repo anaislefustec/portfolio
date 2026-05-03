@@ -60,8 +60,29 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('p-intro-small-img').src = data.images.intro_small;    document.getElementById('p-intro-small-img').src = data.images.intro_small;
 
     // --- DESCRIPTION & VISUEL PRINCIPAL ---
-    document.getElementById('p-description').innerHTML = data.content.description; // innerHTML pour garder les <br>
+    document.getElementById('p-description').innerHTML = data.content.description;
     document.getElementById('p-main-visual').src = data.images.main_visual;
+
+    // --- RÔLE ---
+    const roleEl = document.getElementById('p-role');
+    if (roleEl) roleEl.innerHTML = data.content.role || "";
+
+    // --- DOCUMENTS PDF ---
+    const docsSection = document.getElementById('p-documents-section');
+    const docsList = document.getElementById('p-documents-list');
+    if (docsSection && docsList && data.content.documents && data.content.documents.length > 0) {
+        docsSection.classList.remove('hidden');
+        data.content.documents.forEach(doc => {
+            const a = document.createElement('a');
+            a.className = 'doc-link';
+            a.href = doc.file;
+            a.download = doc.label;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            a.textContent = doc.label;
+            docsList.appendChild(a);
+        });
+    }
 
     // Palette (Boucle sur les logos)
     const paletteContainer = document.getElementById('p-palette-container');
