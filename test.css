@@ -358,6 +358,7 @@ li {
 /* Tags noirs arrondis */
 .tags-row {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -776,9 +777,14 @@ li {
         font-size: 1.8rem;
     }
 
+    .projects-title {
+        line-height: 90%;
+    }
+
     .pinned-image-container {
         height: 200px;
     }
+
 }
 
 .competences-title {
@@ -1175,7 +1181,7 @@ li {
     }
     
     .giant-name {
-        font-size: 35vw;
+        font-size: 25vw;
         padding-top: 50px;
     }
 
@@ -1189,8 +1195,9 @@ li {
     .s-4 { width: 0}
 
     .credits-pill {
-        width: 0;
-        height: 0;
-        font-size: 0;
+        width: 155px;
+        height: 20px;
+        font-size: 0.8rem;
+        padding-bottom: 25px;
     }
 }

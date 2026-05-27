@@ -194,6 +194,16 @@
         flex: none !important;
         width: 100% !important;
     }
+
+    .sketch-title {
+        font-size: 2rem;
+    }
+
+    .sketch-header {
+        text-align: left;
+    }
+
+    
 }
 
 .hand-line { height: 1px; background: #ddd; width: 100%; margin: 0 auto; }
